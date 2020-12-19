@@ -1,0 +1,276 @@
+#body-content {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	/*font-family: "Helvetica Neue", Verdana, Geneva, sans-serif;*/
+	font-family: "Open Sans", "Helvetica Neue", Verdana, Geneva, sans-serif;
+	/*font-family: Verdana, Geneva, sans-serif;*/
+	font-size: 0.95em;
+	background-color: #FCFCFC;
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: #DDE9EB;
+	border-radius: 25px;
+	box-shadow: 3px 5px 6px #888888;
+	padding: 10px 40px;
+}
+
+body {
+	background-color: white;
+	margin: 20px 0 20px 0;
+}
+
+a {
+    /*color: #25748F;*/
+    color: #45849c;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#content {
+	clear: both;
+}
+
+#content p {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: justify;
+}
+
+#info {
+	font-size: .9em;
+	float: left;
+	margin-bottom: 60px;
+	margin-right: auto;
+	position: relative;
+	top: 20px;
+}
+
+#social-links img {
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+img.email {
+	width: 16px;
+}
+
+#social-links {
+	margin-top: 3px;
+}
+
+#my-title {
+	margin-bottom: 15px;
+	color: #2D6A81;
+}
+
+#address {
+	margin-bottom: 10px;
+}
+
+#lab {
+	margin-bottom: 10px;
+}
+
+h1#name {
+	font-size: 1.7em;
+	position: relative;
+	top: 20px;
+	z-index: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #2D6A81;
+	/*border-radius: 10px;*/
+    border-radius: 15px 0px 15px 0px;
+	box-shadow: 2px 2px 3px #BBBBBB;
+	padding: 2px 20px;
+	background-color: #eceef9;
+}
+
+h3 {
+	margin-top: 30px;
+    /*width: 780px;*/
+    /*position: relative;*/
+    /*left: -10px;*/
+}
+
+img#profile-picture {
+	float: left;
+	margin-top: 20px;
+	margin-right: 30px;
+	border: 2px #DDE9EB solid;
+	border-radius: 15px 0px 15px 0px;
+	box-shadow: 1px 1px 5px #AAAAAA;
+	position: relative;
+	z-index: 1;
+	width: 160px;
+}
+
+#nav-menu {
+	float: left;
+	position: absolute;
+    margin-left: 1px;
+    width: 152px;
+	top: 197px;
+    color: #2D6A81;
+    border-radius: 0px 0px 15px 0px;
+    box-shadow: 1px 1px 5px #AAAAAA;
+    padding: 20px 5px 10px 5px;
+    background-color: #eceef9;
+}
+
+#nav-menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#nav-menu li:before {
+    content: "﹘ "; /* "» "; */
+    color: #25748F; /* or whatever color you prefer */
+}
+
+#nav-menu li {
+	padding: 0;
+	margin: 1px 5px;
+	font-size: 0.9em;
+}
+
+#footer {
+	color: gray;
+	font-size: 0.65em;
+}
+
+#publication-list li {
+    margin-bottom: 20px;
+}
+
+#publication-list ol {
+    /*counter-reset: item;*/
+    padding-left: 10px;
+	list-style-type: none;
+}
+
+#publication-list li:before {
+    display: inline-block;
+    float: left;
+    /*content: "(" counter(item) ") ";*/
+    counter-increment: item -1;
+    font-size: .9em;
+    margin-left: -30px;
+}
+
+.paper-authors {
+	/*display: block;*/
+}
+
+.paper-title {
+	display: block;
+	font-weight: bold;
+	background-color: rgba(239, 241, 252, 0.49);
+	font-size: 1.05em;
+	padding: 5px 0;
+}
+
+.paper-venue {
+	font-style: italic;
+}
+
+.paper-venue a {
+    /*font-style: normal;*/
+}
+
+.paper-download {
+	margin-top: 5px;
+	display: block;
+	font-size: .9em;
+}
+
+.paper-download:before {
+    /*content: "» Download: ";*/
+}
+
+.paper-award {
+	margin-top: 5px;
+	display: block;
+	font-size: .9em;
+}
+
+.paper-award span {
+	color: red !important;
+}
+
+.paper-award span::before {
+	background-image: url('../imgs/award-1410027-1192963.png');
+	background-size: 15px 15px;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	vertical-align: middle;
+	content:"";
+}
+
+.paper-award:before {
+	/*content: "» ";*/
+}
+
+#service-list li {
+	color: black;
+	margin-bottom: 2px;
+}
+
+#service-list tr > td:first-child {
+	white-space: nowrap;
+}
+
+#service-list td {
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+#service-list table {
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+#service-list > ul {
+	list-style-type: none;
+	padding-left: 20px;
+}
+
+#talks-list > ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#quotes-list > ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#project-list > ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+blockquote {
+	margin-left: 0mm;
+	font-size: 0.95em;
+	font-style: italic;
+}
+
+blockquote footer {
+	font-style: normal;
+}
+
+
+
