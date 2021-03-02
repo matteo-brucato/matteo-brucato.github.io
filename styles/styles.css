@@ -303,7 +303,7 @@ img#profile-picture {
 }
 
 .paper-award span::before {
-	background-image: url('../imgs/gold-award_ok.jpg');
+	/*background-image: url('../imgs/gold-award_ok.jpg');*/
 	background-size: 15px 20px;
 	display: inline-block;
 	width: 15px;
@@ -406,7 +406,7 @@ a.file_link.award {
 a.file_link.award::before {
 	/*font-family: "FontAwesome";*/
 	/*content: "\f091\00a0\00a0";*/
-	background-image: url('../imgs/gold-award_ok2.png');
+	background-image: url('../imgs/gold-award-small.png');
 	background-size: 15px 20px;
 	background-repeat: no-repeat;
 	display: inline-block;
