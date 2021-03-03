@@ -1,3 +1,10 @@
+html,body {
+	/*text-size-adjust: none;*/
+	/*-webkit-text-size-adjust: none;*/
+	/*-moz-text-size-adjust: none;*/
+	/*-ms-text-size-adjust: none;*/
+}
+
 #body-content {
 	width: 800px;
 	margin-left: auto;
@@ -255,11 +262,30 @@ img#profile-picture {
 	color: #333333;
 }
 
+.announcement {
+	margin: 50px auto;
+	text-align: center;
+	border: 2px darkorange solid;
+	width: 350px;
+	padding: 10px;
+	background-color: lightgoldenrodyellow;
+
+	/*text-size-adjust: 200%;*/
+	/*-webkit-text-size-adjust: 150%;*/
+	/*-moz-text-size-adjust: 150%;*/
+	/*-ms-text-size-adjust: 150%;*/
+}
+
 .paper-links {
 	margin-top: 5px;
 	font-size: .9em;
 	/*margin-left: 20px;*/
 	vertical-align: middle;
+
+	text-size-adjust: 200%;
+	-webkit-text-size-adjust: 150%;
+	-moz-text-size-adjust: 150%;
+	-ms-text-size-adjust: 150%;
 }
 
 .paper-download img {
