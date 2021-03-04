@@ -69,9 +69,9 @@ a:hover {
 }
 
 .social-links img {
-	width: 19px;
-	height: 19px;
-	margin-right: 3px;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
 	vertical-align: middle;
 }
 
@@ -173,7 +173,12 @@ img#profile-picture {
 }
 
 #nav-menu {
+	/*display: block;*/
 	/*float: left;*/
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 	/*position: absolute;*/
 	/*margin-left: 1px;*/
 	/*width: 152px;*/
@@ -196,18 +201,33 @@ img#profile-picture {
 
 #nav-menu li:before {
 	/*content: "﹘ "; !* "» "; *!*/
-	color: #25748F; /* or whatever color you prefer */
+	/*color: #25748F; !* or whatever color you prefer *!*/
 }
 
 #nav-menu li {
 	/*padding: 0;*/
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+	font-variant: petite-caps;
 	font-weight: bold;
-	margin: 1px 5px;
-	font-size: 0.9em;
+	/*margin: 1px 5px;*/
+	margin: 0;
+	font-size: 1.3em;
 	display: inline;
 	list-style-type: none;
-	padding-right: 20px;
+	/*padding-right: 20px;*/
+	padding: 0;
+}
+
+#nav-menu li a {
+	padding: 2px 15px;
+}
+
+#nav-menu li a:hover {
+	/*color:red;*/
+	text-decoration: none;
+	color: #25748F;
+	background-color: #E7EFEF;
+
 }
 
 #footer {
