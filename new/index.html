@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Matteo Brucato</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="../imgs/favicon.png">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-82SB56909H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-82SB56909H');
+	</script>
+
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- Theme init — runs before body renders to avoid a flash -->
+	<script>
+		(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				if (stored === 'dark' || stored === 'light') {
+					document.documentElement.setAttribute('data-theme', stored);
+				}
+			} catch (e) {}
+		})();
+	</script>
+</head>
+<body>
+
+<div class="page">
+
+	<aside class="sidebar" id="sidebar-slot"></aside>
+	<script src="sidebar.js"></script>
+
+	<main class="main">
+
+		<p class="intro">
+			My work centers on <b>in-database prescriptive analytics and decision-making</b> — building data systems that help people decide.
+		</p>
+
+		<!-- ========== TIMELINE ========== -->
+		<section class="section">
+			<h2 class="section-h">Timeline</h2>
+			<div class="timeline">
+
+				<div class="tl-entry current">
+					<div class="tl-line1">
+						<span class="tl-year">2025</span>
+						<img class="tl-logo wordmark" src="../imgs/logo-osm.svg" alt="OSM Data">
+						<span class="tl-role">Co-Founder &amp; Chief Scientific Officer</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://osm-data.com/">OSM Data</a>
+					</div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2021</span>
+						<img class="tl-logo" src="../imgs/logo-msr.ico" alt="Microsoft Research">
+						<span class="tl-role">Researcher</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>
+					</div>
+					<ul class="tl-collabs">
+						<li><a href="https://www.microsoft.com/en-us/research/group/mlo/">MLO (Machine Learning &amp; Optimization) Group</a></li>
+						<li><a href="https://www.microsoft.com/en-us/research/group/datasystems/">Data Systems Group</a></li>
+						<li>Azure <span class="tl-collab-tag">VM Allocator</span></li>
+					</ul>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2014</span>
+						<img class="tl-logo" src="../imgs/logo-umass.ico" alt="UMass Amherst">
+						<span class="tl-role">PhD, Computer Science</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://www.cics.umass.edu/">UMass Amherst</a>
+					</div>
+					<div class="tl-where">
+						<a href="http://dream.cs.umass.edu/">DREAM Lab</a>
+						· advised by <a href="http://people.cs.umass.edu/~phaas">Peter J. Haas</a>, <a href="https://people.cs.umass.edu/~ameli/">Alexandra Meliou</a>, and <a href="https://nyuad.nyu.edu/en/academics/divisions/science/faculty/azza-abouzied.html">Azza Abouzied</a> (NYU)
+					</div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2017</span>
+						<img class="tl-logo" src="../imgs/logo-msr.ico" alt="Microsoft Research">
+						<span class="tl-role">Research Intern</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>
+					</div>
+					<div class="tl-where"><a href="https://www.microsoft.com/en-us/research/group/datasystems/">Data Systems Group</a></div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2016</span>
+						<img class="tl-logo" src="../imgs/logo-ibm.ico" alt="IBM">
+						<span class="tl-role">Research Intern</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="http://www.ibm.com/watson/">IBM Watson</a>
+					</div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">pre-2014</span>
+						<img class="tl-logo" src="../imgs/logo-unibo.ico" alt="University of Bologna">
+						<span class="tl-role">BSc &amp; MSc, Computer Science</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://disi.unibo.it/en">University of Bologna</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ========== RESEARCH ========== -->
+		<section class="section" id="research">
+			<div class="section-h-row">
+				<h2 class="section-h">Research</h2>
+				<a class="section-link" href="publications.html">Full publication list →</a>
+			</div>
+
+			<div class="research-umbrella">
+				All my research centers on <b>in-database prescriptive analytics and decision-making</b>, approached through six complementary aspects — from query languages and execution engines to how systems learn user intent, tune themselves, reason about time, and stay fair.
+			</div>
+
+
+			<div id="research-slot"></div>
+
+		</section>
+
+		<!-- ========== VIDEOS ========== -->
+		<section class="section">
+			<h2 class="section-h">Videos</h2>
+			<div class="videos">
+				<div class="video">
+					<iframe src="https://www.youtube.com/embed/1v5KevGKbfE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="video-cap">VLDB 2020 — Best Demonstration Award</div>
+				</div>
+				<div class="video">
+					<iframe src="https://www.youtube.com/embed/UrEOEplK06I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="video-cap">SIGMOD 2020 — Technical Paper Talk</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== TALKS ========== -->
+		<section class="section">
+			<h2 class="section-h">Talks</h2>
+			<ul class="talks">
+				<li>
+					<span class="yr">2024</span>
+					<span>
+						<span class="title">Enabling In-Database Decision Support with Package Queries</span><br>
+						<span class="where">Gray Systems Lab, Microsoft</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020</span>
+					<span>
+						<span class="title">Stochastic Package Queries for In-Database Constrained Optimization Under Uncertainty</span><br>
+						<span class="where"><a href="https://mitdbg.github.io/nedbday/2020/#program">NEDB</a>, MIT, Cambridge, MA</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2017</span>
+					<span>
+						<span class="title">Scalable Package Queries in Relational Database Systems</span><br>
+						<span class="where"><a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, Redmond; <a href="http://www.vldb.org/2016/">VLDB 2016</a>, New Delhi</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2016</span>
+					<span>
+						<span class="title">Conceptual Queries for Multiple Data Sources</span><br>
+						<span class="where"><a href="https://www.research.ibm.com/labs/austin/">IBM Research</a>, Austin, TX</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2015</span>
+					<span>
+						<span class="title">Package Queries: From Tuples to Packages</span><br>
+						<span class="where"><a href="http://crd.lbl.gov/departments/data-science-and-technology/">Berkeley Lab</a>; <a href="http://amplab.cs.berkeley.edu/">AMPLab</a>, UC Berkeley</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2014</span>
+					<span>
+						<span class="title">Improving Package Recommendations through Query Relaxation</span><br>
+						<span class="where"><a href="http://www.vldb.org/2014/">VLDB 2014</a>, Hangzhou</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2013–14</span>
+					<span>
+						<span class="title">Metric Spaces for Temporal Information Retrieval</span><br>
+						<span class="where"><a href="http://ecir2014.org/">ECIR 2014</a>, Amsterdam; <a href="http://www.cse.unibo.it/en">U. Bologna</a>; <a href="http://cs.au.dk/research/research-areas/data-intensive-systems/">Aarhus University</a></span>
+					</span>
+				</li>
+			</ul>
+		</section>
+
+		<!-- ========== SERVICE ========== -->
+		<section class="section">
+			<h2 class="section-h">Service</h2>
+			<div class="service">
+				<div class="service-block">
+					<h4>Program Committee</h4>
+					<div class="items">VLDB 2027, SIGMOD 2026, SIGMOD 2025, VLDB 2025, DataPlat @ ICDE 2024, TKDE 2020</div>
+				</div>
+				<div class="service-block">
+					<h4>Guest Editorial Board</h4>
+					<div class="items"><a href="http://www.journals.elsevier.com/information-processing-and-management/">Information Processing &amp; Management</a>, special issue on <a href="http://staffwww.dcs.shef.ac.uk/people/L.Derczynski/time_and_ir_ipm.html">Time &amp; Information Retrieval</a>, 2014/15</div>
+				</div>
+				<div class="service-block">
+					<h4>External Review Committee</h4>
+					<div class="items">VLDB 2017, SIGMOD 2015, VLDB 2015, RANLP 2013</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="footer">Last update: on or after Oct 2025.</div>
+
+	</main>
+
+</div>
+
+<script src="papers.js"></script>
+
+</body>
+</html>
