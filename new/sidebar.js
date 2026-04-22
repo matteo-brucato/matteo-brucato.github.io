@@ -9,7 +9,7 @@
 		'</button>',
 
 		'<a href="index.html" class="sb-home-link">',
-		'  <div class="sb-photo"><img src="../imgs/DSCF0916-v2.png" alt="Matteo Brucato"></div>',
+		'  <div class="sb-photo"><img src="../imgs/DSCF0916-v3.png" alt="Matteo Brucato"></div>',
 		'  <h1 class="sb-name">Matteo Brucato</h1>',
 		'</a>',
 
