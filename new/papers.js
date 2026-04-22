@@ -12,7 +12,7 @@
 			year: 2026,
 			title: 'Decisionhouse: Prescriptive Analytics in the Data Stack',
 			authors: 'Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen',
-			venue: 'VLDB Vision',
+			venue: 'VLDB vision',
 			theme: 'decisionhouse-deql'
 		},
 
@@ -312,7 +312,7 @@
 	var STRUCTURE = [
 		{
 			id: 'systems',
-			name: 'Systems · Query Languages &amp; Engines',
+			name: 'Data Systems · Query Languages &amp; Engines',
 			meta: '2014–present',
 			desc: 'How users express decisions and how the system solves them.',
 			subgroups: [
@@ -321,7 +321,7 @@
 					name: 'Decisionhouse &amp; DeQL',
 					meta: '2025–',
 					current: true,
-					desc: 'A new data-system category. DeQL generalizes the approach beyond package queries to the full space of decision queries.'
+					desc: 'A new data-system category. DeQL generalizes the approach to the full space of decision queries.'
 				},
 				{
 					id: 'spaql',
@@ -343,31 +343,31 @@
 			id: 'usability',
 			name: 'Usability · Learning User Intent',
 			meta: '2020–2026',
-			desc: 'How systems learn what the user wants from examples — making prescriptive tooling accessible to non-experts.'
+			desc: 'How systems learn what the user wants — making prescriptive tooling accessible to non-experts.'
 		},
 		{
 			id: 'autotuning',
 			name: 'Auto-Tuning · Workload Intelligence',
 			meta: '2024',
-			desc: 'Prescriptive at the DB-systems layer — recommending indexes and compressing workloads.'
+			desc: 'How databases tune themselves — recommending indexes, compressing workloads.'
 		},
 		{
 			id: 'algorithms',
-			name: 'Algorithms · Decision Abstractions',
+			name: 'Planning &amp; Sequential Decision-Making',
 			meta: '2021',
-			desc: 'Making large decision problems tractable — state abstractions for sequential decision-making. Same principles, different substrate.'
+			desc: 'How classical AI tackles decision-making — abstractions, search, and approximation.'
 		},
 		{
 			id: 'responsibility',
 			name: 'Responsibility · Fair &amp; Equitable Decisions',
 			meta: '2023–present',
-			desc: 'Scaling <a href="http://fairlearn.org">Fairlearn</a> and evaluating fairness of ML models at scale.'
+			desc: 'How to keep automated decisions fair and accountable.'
 		},
 		{
 			id: 'temporal',
-			name: 'AI-adjacent · Temporal Reasoning',
+			name: 'Temporal Reasoning',
 			meta: '2013–2022',
-			desc: 'Time-aware retrieval and ranking — an early thread from my Bologna / Aarhus years plus a 2022 journal paper.'
+			desc: 'How systems understand time in text and queries.'
 		}
 	];
 
@@ -387,10 +387,27 @@
 		return '<b>' + t + '</b>';
 	}
 
+	var ICONS = {
+		paper:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>',
+		video:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>',
+		slides: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg>',
+		poster: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
+		ext:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+	};
+
+	function iconForLabel(label) {
+		var l = String(label).toLowerCase();
+		if (l.indexOf('talk') !== -1 || l.indexOf('video') !== -1) return ICONS.video;
+		if (l.indexOf('slide') !== -1) return ICONS.slides;
+		if (l.indexOf('poster') !== -1) return ICONS.poster;
+		if (l.indexOf('paper') !== -1 || l.indexOf('pre-print') !== -1 || l.indexOf('preprint') !== -1) return ICONS.paper;
+		return ICONS.ext;
+	}
+
 	function linksHTML(p) {
 		if (!p.links || !p.links.length) return '';
 		var html = p.links.map(function (l) {
-			return '<a href="' + esc(l.href) + '">' + esc(l.label) + '</a>';
+			return '<a href="' + esc(l.href) + '"><span class="link-icon">' + iconForLabel(l.label) + '</span>' + esc(l.label) + '</a>';
 		}).join(' ');
 		return '<span class="links">' + html + '</span>';
 	}
