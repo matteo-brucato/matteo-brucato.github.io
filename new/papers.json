@@ -310,15 +310,7 @@
       "theme": "temporal"
     }
   ],
-  "extras": [
-    {
-      "title": "Fairlearn scalability contributions",
-      "titleHref": "https://github.com/fairlearn/fairlearn",
-      "authors": "Microsoft collaboration — open-source fairness library",
-      "yearLabel": "—",
-      "theme": "responsibility"
-    }
-  ],
+  "extras": [],
   "structure": [
     {
       "id": "systems",
