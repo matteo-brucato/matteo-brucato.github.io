@@ -54,7 +54,10 @@
 			'    ' + titleHTML(p)
 		];
 		if (p.venue) {
-			parts.push('    <span class="venue">' + esc(p.venue) + '</span>');
+			var venueInner = p.venueHref
+				? '<a href="' + esc(p.venueHref) + '">' + esc(p.venue) + '</a>'
+				: esc(p.venue);
+			parts.push('    <span class="venue">' + venueInner + '</span>');
 		}
 		if (p.award) {
 			parts.push('    <span class="award">' + esc(p.award) + '</span>');

@@ -25,6 +25,20 @@
       "theme": "usability"
     },
     {
+      "id": "speeding-fairness-reductions",
+      "year": 2026,
+      "title": "Speeding up fairness reductions",
+      "titleHref": "https://openreview.net/forum?id=C0AdL3r1Dc",
+      "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
+      "venue": "TMLR",
+      "venueHref": "https://jmlr.org/tmlr/",
+      "links": [
+        { "label": "OpenReview", "href": "https://openreview.net/forum?id=C0AdL3r1Dc" },
+        { "label": "Paper", "href": "https://openreview.net/pdf?id=C0AdL3r1Dc" }
+      ],
+      "theme": "responsibility"
+    },
+    {
       "id": "sketchrefine",
       "year": 2025,
       "title": "Stochastic SketchRefine: Scaling In-Database Decision-Making under Uncertainty to Millions of Tuples",
