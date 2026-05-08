@@ -13,11 +13,11 @@
 	}
 
 	function titleHTML(p) {
-		var t = esc(p.title);
+		var inner = p.highlight ? '<b>' + esc(p.title) + '</b>' : esc(p.title);
 		if (p.titleHref) {
-			return '<a class="title-link" href="' + esc(p.titleHref) + '">' + t + '</a>';
+			return '<a class="title-link" href="' + esc(p.titleHref) + '">' + inner + '</a>';
 		}
-		return '<b>' + t + '</b>';
+		return inner;
 	}
 
 	var ICONS = {
@@ -58,6 +58,9 @@
 				? '<a href="' + esc(p.venueHref) + '">' + esc(p.venue) + '</a>'
 				: esc(p.venue);
 			parts.push('    <span class="venue">' + venueInner + '</span>');
+		}
+		if (p.status) {
+			parts.push('    <span class="status">' + esc(p.status) + '</span>');
 		}
 		if (p.award) {
 			parts.push('    <span class="award">' + esc(p.award) + '</span>');

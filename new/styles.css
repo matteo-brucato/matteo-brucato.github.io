@@ -676,6 +676,14 @@ h1, h2, h3, h4 {
 .paper .venue a { color: var(--venue); border-bottom: none; }
 .paper .venue a:hover { color: var(--accent-hover); border-bottom: 1px dashed var(--accent-hover); }
 
+.paper .status {
+  color: var(--venue);
+  font-size: 10.5px;
+  font-style: italic;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
 .paper .award {
   color: var(--award);
   font-size: 10.5px;
@@ -788,18 +796,15 @@ h1, h2, h3, h4 {
   padding: 0;
   list-style: none;
   font-size: 12.5px;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .talks li {
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 12px;
-  padding: 5px 0;
-  border-bottom: 1px dashed var(--border-subtle);
+  padding: 2px 0;
 }
-
-.talks li:last-child { border-bottom: none; }
 
 .talks .yr {
   color: var(--fg-faint);

@@ -3,30 +3,37 @@
     {
       "id": "decisionhouse",
       "year": 2026,
+      "highlight": true,
       "title": "Decisionhouse: Prescriptive Analytics in the Data Stack",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB vision",
+      "status": "under review",
       "theme": "decisionhouse-deql"
     },
     {
       "id": "deql-studio",
       "year": 2026,
+      "highlight": true,
       "title": "DeQL Studio: Declarative Decision-Making over Relational Data",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB demo",
+      "status": "under review",
       "theme": "decisionhouse-deql"
     },
     {
-      "id": "intent-synthesis-2026",
-      "year": 2026,
+      "id": "intent-synthesis-2027",
+      "year": 2027,
+      "highlight": true,
       "title": "Example-Driven Intent Synthesis for Constrained Data Bundle Retrieval: Focused Text Snippet Extraction and Beyond",
       "authors": "Whanhee Cho, Kuangfei Long, Mahmood Jasim, Matteo Brucato, Alexandra Meliou, Peter Haas, Anna Fariha",
       "venue": "VLDB",
+      "status": "under review",
       "theme": "usability"
     },
     {
       "id": "speeding-fairness-reductions",
       "year": 2026,
+      "highlight": true,
       "title": "Speeding up fairness reductions",
       "titleHref": "https://openreview.net/forum?id=C0AdL3r1Dc",
       "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
