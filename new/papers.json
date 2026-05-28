@@ -8,7 +8,8 @@
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB vision",
       "status": "under review",
-      "theme": "decisionhouse-deql"
+      "theme": "decisionhouse-deql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "deql-studio",
@@ -18,7 +19,8 @@
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB demo",
       "status": "under review",
-      "theme": "decisionhouse-deql"
+      "theme": "decisionhouse-deql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "intent-synthesis-2027",
@@ -28,22 +30,41 @@
       "authors": "Whanhee Cho, Kuangfei Long, Mahmood Jasim, Matteo Brucato, Alexandra Meliou, Peter Haas, Anna Fariha",
       "venue": "VLDB",
       "status": "under review",
-      "theme": "usability"
+      "theme": "usability",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "speeding-fairness-reductions",
       "year": 2026,
       "highlight": true,
       "title": "Speeding up fairness reductions",
-      "titleHref": "https://openreview.net/forum?id=C0AdL3r1Dc",
+      "titleHref": "../files/speeding-fairness-reductions-tmlr2026.pdf",
       "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
       "venue": "TMLR",
       "venueHref": "https://jmlr.org/tmlr/",
+      "summary": "How to make fairness checks fast at production scale — performance improvements built into Fairlearn, the open-source library many teams rely on to reduce AI bias.",
+      "abstract": "We study the problem of fair classification, where the goal is to optimize classification accuracy subject to fairness constraints. This type of problem occurs in many real-world applications, where we seek to assure that a deployed AI system does not disproportionally impact historically disadvantaged groups. One of the leading approaches in the literature is the reduction approach (Agarwal et al., 2018; 2019), which enjoys many favorable properties. For instance, it supports a wide range of fairness constraints and model families and is usually easy to incorporate in existing ML pipelines. The reduction approach acts as a wrapper around a standard ML algorithm and obtains a model that satisfies fairness constraints by repeatedly running a fairness-unaware base algorithm. A typical number of iterations is around 100, meaning that the reduction approach can be up to 100 times slower than the base algorithm, which limits its applicability. To overcome this limitation, we introduce two algorithmic innovations. First, we interleave the exponentiated gradient updates of the standard reduction approach with column-generation updates, which leads to a decrease in the number of calls to the base algorithm. Second, we introduce adaptive sampling, which decreases the sizes of the datasets used in the calls to the base algorithm. We conduct comprehensive experiments to evaluate efficacy of our improvements, showing that our two innovations speed up the reduction approach by an order of magnitude without sacrificing the quality of the resulting solutions.",
       "links": [
-        { "label": "OpenReview", "href": "https://openreview.net/forum?id=C0AdL3r1Dc" },
-        { "label": "Paper", "href": "https://openreview.net/pdf?id=C0AdL3r1Dc" }
+        {
+          "label": "Paper",
+          "href": "../files/speeding-fairness-reductions-tmlr2026.pdf"
+        },
+        {
+          "label": "OpenReview",
+          "href": "https://openreview.net/forum?id=C0AdL3r1Dc"
+        },
+        {
+          "label": "Fairlearn",
+          "href": "https://fairlearn.org/",
+          "icon": "globe"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/fairlearn/fairlearn"
+        }
       ],
-      "theme": "responsibility"
+      "theme": "responsibility",
+      "venueFull": "Transactions on Machine Learning Research"
     },
     {
       "id": "sketchrefine",
@@ -51,12 +72,21 @@
       "title": "Stochastic SketchRefine: Scaling In-Database Decision-Making under Uncertainty to Millions of Tuples",
       "titleHref": "https://www.vldb.org/pvldb/vol18/p3106-haque.pdf",
       "authors": "Riddho Ridwanul Haque, Anh Mai, Matteo Brucato, Azza Abouzied, Peter Haas, Alexandra Meliou",
+      "summary": "How to compute risk-aware optimal decisions across large datasets orders of magnitude faster — making 'portfolio-style' optimization tractable at database scale.",
+      "abstract": "Decision making under uncertainty often requires choosing packages, or bags of tuples, that collectively optimize expected outcomes while limiting risks. Processing Stochastic Package Queries (SPQs) involves solving very large optimization problems on uncertain data. Monte Carlo methods create numerous scenarios, or sample realizations of the stochastic attributes of all the tuples, and generate packages with optimal objective values across these scenarios. The number of scenarios needed for accurate approximation—and hence the size of the optimization problem when using prior methods—increases with variance in the data, and the search space of the optimization problem increases exponentially with the number of tuples in the relation. Existing solvers take hours to process SPQs on large relations containing stochastic attributes with high variance. Besides enriching the SPaQL language to capture a broader class of risk specifications, we make two fundamental contributions toward scalable SPQ processing. First, we propose risk-constraint linearization (RCL), which converts SPQs into Integer Linear Programs (ILPs) whose size is independent of the number of scenarios used. Solving these ILPs gives us feasible and near-optimal packages. Second, we propose Stochastic SketchRefine, a divide and conquer framework that breaks down a large stochastic optimization problem into subproblems involving smaller subsets of tuples. Our experiments show that, together, RCL and Stochastic SketchRefine produce high-quality packages in orders of magnitude lower runtime than the state of the art.",
       "venue": "VLDB",
       "links": [
-        { "label": "Paper", "href": "https://www.vldb.org/pvldb/vol18/p3106-haque.pdf" },
-        { "label": "Extended", "href": "https://arxiv.org/abs/2411.17915" }
+        {
+          "label": "Paper",
+          "href": "https://www.vldb.org/pvldb/vol18/p3106-haque.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/abs/2411.17915"
+        }
       ],
-      "theme": "spaql"
+      "theme": "spaql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "fairnesseval",
@@ -66,9 +96,17 @@
       "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
       "venue": "EDBT demo",
       "links": [
-        { "label": "Paper", "href": "https://openproceedings.org/2025/conf/edbt/paper-346.pdf" }
+        {
+          "label": "Paper",
+          "href": "https://openproceedings.org/2025/conf/edbt/paper-346.pdf"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/softlab-unimore/fairnesseval"
+        }
       ],
-      "theme": "responsibility"
+      "theme": "responsibility",
+      "venueFull": "International Conference on Extending Database Technology"
     },
     {
       "id": "wred",
@@ -79,9 +117,13 @@
       "venue": "SIGMOD",
       "pages": "1-26",
       "links": [
-        { "label": "Paper", "href": "https://dl.acm.org/doi/abs/10.1145/3639305" }
+        {
+          "label": "Paper",
+          "href": "https://dl.acm.org/doi/abs/10.1145/3639305"
+        }
       ],
-      "theme": "autotuning"
+      "theme": "autotuning",
+      "venueFull": "ACM SIGMOD International Conference on Management of Data"
     },
     {
       "id": "scaling-package-billion",
@@ -92,10 +134,17 @@
       "venue": "VLDB",
       "pages": "1146-1158",
       "links": [
-        { "label": "Paper", "href": "https://www.vldb.org/pvldb/vol17/p1146-mai.pdf" },
-        { "label": "Extended", "href": "https://arxiv.org/pdf/2307.02860.pdf" }
+        {
+          "label": "Paper",
+          "href": "https://www.vldb.org/pvldb/vol17/p1146-mai.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/pdf/2307.02860.pdf"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "tois-ranking",
@@ -104,10 +153,15 @@
       "titleHref": "https://dl.acm.org/doi/pdf/10.1145/3565481",
       "authors": "Stefano Giovanni Rizzo, Matteo Brucato, Danilo Montesi",
       "venue": "ACM TOIS",
+      "venueHref": "https://dl.acm.org/journal/tois",
       "links": [
-        { "label": "Paper", "href": "https://dl.acm.org/doi/pdf/10.1145/3565481" }
+        {
+          "label": "Paper",
+          "href": "https://dl.acm.org/doi/pdf/10.1145/3565481"
+        }
       ],
-      "theme": "temporal"
+      "theme": "temporal",
+      "venueFull": "ACM Transactions on Information Systems"
     },
     {
       "id": "subsume",
@@ -115,11 +169,15 @@
       "title": "SubSumE: A Dataset for Subjective Summary Extraction from Wikipedia Documents",
       "titleHref": "https://aclanthology.org/2021.newsum-1.14.pdf",
       "authors": "Nishant Yadav, Matteo Brucato, Anna Fariha, Oscar Yongquist, Julian Killingback, Alexandra Meliou, Peter J. Haas",
-      "venue": "NewSum @ EMNLP",
+      "venue": "EMNLP (NewSum)",
       "links": [
-        { "label": "Paper", "href": "https://aclanthology.org/2021.newsum-1.14.pdf" }
+        {
+          "label": "Paper",
+          "href": "https://aclanthology.org/2021.newsum-1.14.pdf"
+        }
       ],
-      "theme": "usability"
+      "theme": "usability",
+      "venueFull": "Workshop on New Frontiers in Summarization"
     },
     {
       "id": "mdp-abstractions",
@@ -129,9 +187,13 @@
       "authors": "Samer B. Nashed, Justin Svegliato, Matteo Brucato, Connor Basich, Rod Grupen, Shlomo Zilberstein",
       "venue": "ICRA",
       "links": [
-        { "label": "Paper", "href": "../files/NSBBGZicra21_cr.pdf" }
+        {
+          "label": "Paper",
+          "href": "../files/NSBBGZicra21_cr.pdf"
+        }
       ],
-      "theme": "algorithms"
+      "theme": "algorithms",
+      "venueFull": "IEEE International Conference on Robotics and Automation"
     },
     {
       "id": "spaql-tools",
@@ -143,10 +205,17 @@
       "award": "Best Demo",
       "awardNote": "Best Demonstration Award at VLDB 2020",
       "links": [
-        { "label": "Paper", "href": "../files/p1202-brucato.pdf" },
-        { "label": "Talk", "href": "https://www.youtube.com/watch?v=1v5KevGKbfE" }
+        {
+          "label": "Paper",
+          "href": "../files/p1202-brucato.pdf"
+        },
+        {
+          "label": "Talk",
+          "href": "https://www.youtube.com/watch?v=1v5KevGKbfE"
+        }
       ],
-      "theme": "spaql"
+      "theme": "spaql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "sudocu",
@@ -155,13 +224,20 @@
       "titleHref": "https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf",
       "authors": "Anna Fariha, Matteo Brucato, Peter J. Haas, Alexandra Meliou",
       "venue": "VLDB demo",
-      "award": "Runner-up Best Demo",
+      "award": "Best Demo Runner-up",
       "awardNote": "Best Demonstration Runner-Up Award at VLDB 2020",
       "links": [
-        { "label": "Paper", "href": "https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf" },
-        { "label": "Talk", "href": "https://www.youtube.com/watch?v=ZGzF6cBSYjo" }
+        {
+          "label": "Paper",
+          "href": "https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf"
+        },
+        {
+          "label": "Talk",
+          "href": "https://www.youtube.com/watch?v=ZGzF6cBSYjo"
+        }
       ],
-      "theme": "usability"
+      "theme": "usability",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "spaql-sigmod",
@@ -172,11 +248,21 @@
       "venue": "SIGMOD",
       "pages": "269-283",
       "links": [
-        { "label": "Paper", "href": "../files/3318464.3389765.pdf" },
-        { "label": "Extended", "href": "https://arxiv.org/pdf/2103.06784.pdf" },
-        { "label": "Talk", "href": "https://www.youtube.com/watch?v=UrEOEplK06I" }
+        {
+          "label": "Paper",
+          "href": "../files/3318464.3389765.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/pdf/2103.06784.pdf"
+        },
+        {
+          "label": "Talk",
+          "href": "https://www.youtube.com/watch?v=UrEOEplK06I"
+        }
       ],
-      "theme": "spaql"
+      "theme": "spaql",
+      "venueFull": "ACM SIGMOD International Conference on Management of Data"
     },
     {
       "id": "cacm-paql",
@@ -189,10 +275,17 @@
       "award": "Research Highlight",
       "awardNote": "CACM Research Highlight",
       "links": [
-        { "label": "Paper", "href": "../files/cacm-paql.pdf" },
-        { "label": "Tech Perspective (Chaudhuri)", "href": "https://cacm.acm.org/magazines/2019/2/234345-technical-perspective-to-do-or-not-to-do" }
+        {
+          "label": "Paper",
+          "href": "../files/cacm-paql.pdf"
+        },
+        {
+          "label": "Tech Perspective (Chaudhuri)",
+          "href": "https://cacm.acm.org/magazines/2019/2/234345-technical-perspective-to-do-or-not-to-do"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "Communications of the ACM"
     },
     {
       "id": "vldbj-paql",
@@ -204,10 +297,17 @@
       "pages": "693-718",
       "awardNote": "Invited journal paper — Special Issue on Best Papers of VLDB 2016",
       "links": [
-        { "label": "Pre-print", "href": "../files/scalable-paql.pdf" },
-        { "label": "Publication", "href": "https://link.springer.com/" }
+        {
+          "label": "Pre-print",
+          "href": "../files/scalable-paql.pdf"
+        },
+        {
+          "label": "Publication",
+          "href": "https://link.springer.com/"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "The VLDB Journal"
     },
     {
       "id": "sigmod-rec",
@@ -220,9 +320,13 @@
       "award": "Research Highlight",
       "awardNote": "ACM SIGMOD Research Highlight Award",
       "links": [
-        { "label": "Paper", "href": "https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf" }
+        {
+          "label": "Paper",
+          "href": "https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "ACM SIGMOD Record"
     },
     {
       "id": "redistributing-funds",
@@ -232,9 +336,13 @@
       "authors": "Matteo Brucato, Azza Abouzied, Chris Blauvelt",
       "venue": "arXiv",
       "links": [
-        { "label": "Paper", "href": "https://arxiv.org/pdf/1706.00070" }
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/pdf/1706.00070"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "arXiv preprint"
     },
     {
       "id": "paql-vldb-2016",
@@ -248,12 +356,25 @@
       "award": "Best Papers",
       "awardNote": "Best Papers of VLDB 2016 (invited journal paper in VLDB Journal)",
       "links": [
-        { "label": "Paper", "href": "http://packagebuilder.cs.umass.edu/papers/p576-brucato.pdf" },
-        { "label": "Extended", "href": "http://arxiv.org/pdf/1512.03564v2.pdf" },
-        { "label": "Slides", "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-presentation-share.pdf" },
-        { "label": "Poster", "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-poster.pdf" }
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p576-brucato.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "http://arxiv.org/pdf/1512.03564v2.pdf"
+        },
+        {
+          "label": "Slides",
+          "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-presentation-share.pdf"
+        },
+        {
+          "label": "Poster",
+          "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-poster.pdf"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "query-relaxation",
@@ -261,14 +382,21 @@
       "title": "Improving Package Recommendations through Query Relaxation",
       "titleHref": "http://dl.acm.org/citation.cfm?id=2658843",
       "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
-      "venue": "Data4U @ VLDB",
+      "venue": "VLDB (Data4U)",
       "location": "Hangzhou, China",
       "pages": "13-18",
       "links": [
-        { "label": "Paper", "href": "http://packagebuilder.cs.umass.edu/papers/p3-brucato.pdf" },
-        { "label": "Slides", "href": "http://packagebuilder.cs.umass.edu/papers/package-recomm-slides-web.pdf" }
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p3-brucato.pdf"
+        },
+        {
+          "label": "Slides",
+          "href": "http://packagebuilder.cs.umass.edu/papers/package-recomm-slides-web.pdf"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "Data4U Workshop"
     },
     {
       "id": "pkgbuilder-vldb-demo",
@@ -280,10 +408,17 @@
       "location": "Hangzhou, China",
       "pages": "1593-1596",
       "links": [
-        { "label": "Paper", "href": "http://packagebuilder.cs.umass.edu/papers/p1069-brucato.pdf" },
-        { "label": "Poster", "href": "http://packagebuilder.cs.umass.edu/papers/main-poster.pdf" }
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p1069-brucato.pdf"
+        },
+        {
+          "label": "Poster",
+          "href": "http://packagebuilder.cs.umass.edu/papers/main-poster.pdf"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "Proceedings of the VLDB Endowment"
     },
     {
       "id": "pkgbuilder-sigmod-poster",
@@ -295,9 +430,13 @@
       "location": "Snowbird, UT, USA",
       "pages": "1613-1614",
       "links": [
-        { "label": "Paper", "href": "http://packagebuilder.cs.umass.edu/papers/p1613-fernandes.pdf" }
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p1613-fernandes.pdf"
+        }
       ],
-      "theme": "paql"
+      "theme": "paql",
+      "venueFull": "ACM SIGMOD International Conference on Management of Data"
     },
     {
       "id": "metric-spaces",
@@ -309,10 +448,17 @@
       "location": "Amsterdam, the Netherlands",
       "pages": "385-397",
       "links": [
-        { "label": "Paper", "href": "../files/84160385_e.pdf" },
-        { "label": "Slides", "href": "../files/TIR-ECIR14v1_web.pdf" }
+        {
+          "label": "Paper",
+          "href": "../files/84160385_e.pdf"
+        },
+        {
+          "label": "Slides",
+          "href": "../files/TIR-ECIR14v1_web.pdf"
+        }
       ],
-      "theme": "temporal"
+      "theme": "temporal",
+      "venueFull": "European Conference on Information Retrieval"
     },
     {
       "id": "named-temporal",
@@ -326,9 +472,13 @@
       "award": "Best Young Researcher Nominee",
       "awardNote": "Best Young Researcher Award Nominee",
       "links": [
-        { "label": "Paper", "href": "http://aclweb.org/anthology/R/R13/R13-1015.pdf" }
+        {
+          "label": "Paper",
+          "href": "http://aclweb.org/anthology/R/R13/R13-1015.pdf"
+        }
       ],
-      "theme": "temporal"
+      "theme": "temporal",
+      "venueFull": "International Conference on Recent Advances in Natural Language Processing"
     }
   ],
   "extras": [],
@@ -342,7 +492,7 @@
         {
           "id": "decisionhouse-deql",
           "name": "Decisionhouse & DeQL",
-          "meta": "2025–",
+          "meta": "2025–present",
           "current": true,
           "desc": "A new data-system category. DeQL generalizes the approach to the full space of decision queries."
         },

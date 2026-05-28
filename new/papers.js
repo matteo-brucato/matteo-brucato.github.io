@@ -25,51 +25,80 @@
 		video:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>',
 		slides: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg>',
 		poster: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
-		ext:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+		ext:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>',
+		abstract: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="7" x2="19" y2="7"/><line x1="5" y1="12" x2="19" y2="12"/><line x1="5" y1="17" x2="14" y2="17"/></svg>',
+		summary: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>',
+		globe:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+		github: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>'
 	};
 
-	function iconForLabel(label) {
-		var l = String(label).toLowerCase();
-		if (l.indexOf('talk') !== -1 || l.indexOf('video') !== -1) return ICONS.video;
-		if (l.indexOf('slide') !== -1) return ICONS.slides;
-		if (l.indexOf('poster') !== -1) return ICONS.poster;
-		if (l.indexOf('paper') !== -1 || l.indexOf('pre-print') !== -1 || l.indexOf('preprint') !== -1) return ICONS.paper;
+	function iconForLink(l) {
+		if (l.icon && ICONS[l.icon]) return ICONS[l.icon];
+		var label = String(l.label).toLowerCase();
+		if (label.indexOf('github') !== -1) return ICONS.github;
+		if (label.indexOf('talk') !== -1 || label.indexOf('video') !== -1) return ICONS.video;
+		if (label.indexOf('slide') !== -1) return ICONS.slides;
+		if (label.indexOf('poster') !== -1) return ICONS.poster;
+		if (label.indexOf('paper') !== -1 || label.indexOf('pre-print') !== -1 || label.indexOf('preprint') !== -1 || label.indexOf('extended') !== -1) return ICONS.paper;
 		return ICONS.ext;
 	}
 
 	function linksHTML(p) {
-		if (!p.links || !p.links.length) return '';
-		var html = p.links.map(function (l) {
-			return '<a href="' + esc(l.href) + '"><span class="link-icon">' + iconForLabel(l.label) + '</span>' + esc(l.label) + '</a>';
-		}).join(' ');
-		return '<span class="links">' + html + '</span>';
+		var items = [];
+		if (p.summary && !p.highlight) {
+			items.push('<button type="button" class="abstract-toggle" data-toggle-target=".summary" aria-expanded="false"><span class="link-icon">' + ICONS.summary + '</span>Summary</button>');
+		}
+		if (p.abstract) {
+			items.push('<button type="button" class="abstract-toggle" data-toggle-target=".abstract" aria-expanded="false"><span class="link-icon">' + ICONS.abstract + '</span>Abstract</button>');
+		}
+		if (p.links) {
+			p.links.forEach(function (l) {
+				items.push('<a href="' + esc(l.href) + '"><span class="link-icon">' + iconForLink(l) + '</span>' + esc(l.label) + '</a>');
+			});
+		}
+		if (!items.length) return '';
+		return '<span class="links">' + items.join(' ') + '</span>';
 	}
 
 	function paperHTML(p) {
 		var yearLabel = (p.yearLabel !== undefined) ? p.yearLabel : p.year;
-		var parts = [
-			'<div class="paper">',
-			'  <span class="yr">' + esc(String(yearLabel)) + '</span>',
-			'  <span class="title">',
-			'    ' + titleHTML(p)
-		];
+		var metaLeft = ['<span class="yr">' + esc(String(yearLabel)) + '</span>'];
 		if (p.venue) {
 			var venueInner = p.venueHref
 				? '<a href="' + esc(p.venueHref) + '">' + esc(p.venue) + '</a>'
 				: esc(p.venue);
-			parts.push('    <span class="venue">' + venueInner + '</span>');
+			metaLeft.push('<span class="venue">' + venueInner + '</span>');
 		}
 		if (p.status) {
-			parts.push('    <span class="status">' + esc(p.status) + '</span>');
+			metaLeft.push('<span class="status">' + esc(p.status) + '</span>');
 		}
 		if (p.award) {
-			parts.push('    <span class="award">' + esc(p.award) + '</span>');
+			metaLeft.push('<span class="award">' + esc(p.award) + '</span>');
+		}
+
+		var parts = [
+			'<div class="paper' + (p.highlight ? ' highlight' : '') + '">',
+			'  <div class="meta-left">' + metaLeft.join('') + '</div>',
+			'  <span class="title">',
+			'    ' + titleHTML(p)
+		];
+		if (p.summary && p.highlight) {
+			parts.push('    <span class="summary">' + esc(p.summary) + '</span>');
 		}
 		if (p.authors) {
 			parts.push('    <span class="authors">' + esc(p.authors) + '</span>');
 		}
-		if (p.links && p.links.length) {
+		if (p.venueFull) {
+			parts.push('    <span class="venue-full">' + esc(p.venueFull) + '</span>');
+		}
+		if ((p.links && p.links.length) || p.abstract || (p.summary && !p.highlight)) {
 			parts.push('    ' + linksHTML(p));
+		}
+		if (p.summary && !p.highlight) {
+			parts.push('    <span class="summary" hidden>' + esc(p.summary) + '</span>');
+		}
+		if (p.abstract) {
+			parts.push('    <div class="abstract" hidden>' + esc(p.abstract) + '</div>');
 		}
 		parts.push('  </span>');
 		parts.push('</div>');
@@ -123,7 +152,9 @@
 	function renderFlatList(DATA, container) {
 		var all = DATA.papers.slice().sort(function (a, b) { return b.year - a.year; });
 		var html = '<ul class="pub-list">';
-		html += all.map(function (p) { return '<li>' + paperHTML(p) + '</li>'; }).join('\n');
+		html += all.map(function (p) {
+			return '<li' + (p.highlight ? ' class="highlight"' : '') + '>' + paperHTML(p) + '</li>';
+		}).join('\n');
 		html += '</ul>';
 		container.innerHTML = html;
 	}
@@ -134,6 +165,24 @@
 		var pubSlot = document.getElementById('publications-slot');
 		if (pubSlot) renderFlatList(DATA, pubSlot);
 	}
+
+	// Toggle abstract / summary panels (event delegation).
+	document.addEventListener('click', function (e) {
+		var btn = e.target.closest && e.target.closest('.abstract-toggle');
+		if (!btn) return;
+		var selector = btn.getAttribute('data-toggle-target') || '.abstract';
+		var title = btn.closest('.title');
+		var panel = title && title.querySelector(selector);
+		if (!panel) return;
+		var open = panel.hasAttribute('hidden');
+		if (open) {
+			panel.removeAttribute('hidden');
+			btn.setAttribute('aria-expanded', 'true');
+		} else {
+			panel.setAttribute('hidden', '');
+			btn.setAttribute('aria-expanded', 'false');
+		}
+	});
 
 	// Load data and render.
 	fetch('papers.json')

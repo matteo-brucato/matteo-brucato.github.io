@@ -14,6 +14,7 @@
   --current: #dc2626;
   --award: #b45309;
   --venue: #4f46e5;
+  --highlight-bg: #eef2ff;
 
   --osm-bg: #1e293b;    --osm-fg: #fde68a;
   --msr-bg: #0078d4;    --msr-fg: #ffffff;
@@ -38,6 +39,7 @@
     --current: #f87171;
     --award: #fbbf24;
     --venue: #a5b4fc;
+    --highlight-bg: #1e2342;
 
     --osm-bg: #fde68a;    --osm-fg: #1e293b;
     --msr-bg: #38bdf8;    --msr-fg: #0b1726;
@@ -62,6 +64,7 @@
   --current: #f87171;
   --award: #fbbf24;
   --venue: #a5b4fc;
+  --highlight-bg: #1e2342;
 
   --osm-bg: #fde68a;    --osm-fg: #1e293b;
   --msr-bg: #38bdf8;    --msr-fg: #0b1726;
@@ -110,8 +113,8 @@ h1, h2, h3, h4 {
 
 .page {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 48px;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 24px;
@@ -178,7 +181,7 @@ h1, h2, h3, h4 {
 }
 
 .sb-role {
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--fg-muted);
   line-height: 1.4;
   margin: 0 0 12px;
@@ -640,12 +643,28 @@ h1, h2, h3, h4 {
 
 .paper {
   display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 8px;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
   align-items: baseline;
-  padding: 5px 0;
+  padding: 2px 0 2px 4px;
   font-size: 13px;
   line-height: 1.55;
+}
+
+.paper.highlight {
+  background: var(--highlight-bg);
+  border-radius: 4px;
+}
+
+.paper.highlight + .paper.highlight,
+.pub-list > li.highlight + li.highlight {
+  margin-top: 4px;
+}
+
+.paper .meta-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .paper .yr {
@@ -667,42 +686,54 @@ h1, h2, h3, h4 {
 }
 
 .paper .venue {
-  color: var(--venue);
+  color: var(--fg-muted);
   font-size: 11px;
-  margin-left: 6px;
-  white-space: nowrap;
+  font-weight: 500;
 }
 
-.paper .venue a { color: var(--venue); border-bottom: none; }
-.paper .venue a:hover { color: var(--accent-hover); border-bottom: 1px dashed var(--accent-hover); }
+.paper .venue a { color: var(--fg-muted); border-bottom: none; }
+.paper .venue a:hover { color: var(--accent); border-bottom: 1px dashed var(--accent); }
 
 .paper .status {
-  color: var(--venue);
+  color: var(--fg-subtle);
   font-size: 10.5px;
   font-style: italic;
-  margin-left: 6px;
-  white-space: nowrap;
+}
+
+.paper .venue-full {
+  display: block;
+  font-size: 10.5px;
+  color: var(--fg-subtle);
+  margin-top: 2px;
 }
 
 .paper .award {
+  position: relative;
   color: var(--award);
   font-size: 10.5px;
   font-weight: 600;
-  margin-left: 6px;
-  white-space: nowrap;
 }
 
 .paper .award::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  right: 100%;
+  top: 1px;
   width: 12px;
   height: 14px;
+  margin-right: 3px;
   background-image: url('../imgs/gold-award-small.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  vertical-align: -3px;
-  margin-right: 3px;
+}
+
+.paper .summary:not([hidden]) {
+  display: block;
+  font-size: 12.5px;
+  font-style: italic;
+  color: var(--fg);
+  margin-top: 4px;
 }
 
 .paper .authors {
@@ -722,14 +753,14 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  color: var(--fg-subtle);
+  color: var(--accent);
   margin-right: 10px;
   border-bottom: 1px solid transparent;
 }
 
 .paper .links a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
 }
 
 .paper .links .link-icon {
@@ -742,6 +773,38 @@ h1, h2, h3, h4 {
 .paper .links .link-icon svg {
   width: 100%;
   height: 100%;
+}
+
+.paper .links button.abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 10px 0 0;
+  color: var(--accent);
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  vertical-align: baseline;
+}
+
+.paper .links button.abstract-toggle:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+
+.paper .abstract:not([hidden]) {
+  margin: 6px 0 4px;
+  padding: 6px 0 6px 10px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--fg-muted);
+  border-left: 2px solid var(--border);
+  text-align: justify;
 }
 
 /* Flat publications list --------------------------------------------------- */
