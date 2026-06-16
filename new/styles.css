@@ -613,20 +613,6 @@ h1, h2, h3, h4 {
   white-space: nowrap;
 }
 
-.sub-group.current .sub-name::after {
-  content: "CURRENT";
-  display: inline-block;
-  font-size: 9px;
-  font-weight: 700;
-  color: var(--current);
-  background: rgba(220, 38, 38, 0.12);
-  padding: 1px 6px;
-  border-radius: 999px;
-  margin-left: 8px;
-  letter-spacing: 0.3px;
-  vertical-align: middle;
-}
-
 .sub-alias {
   font-size: 11px;
   color: var(--fg-faint);
@@ -693,6 +679,15 @@ h1, h2, h3, h4 {
 
 .paper .venue a { color: var(--fg-muted); border-bottom: none; }
 .paper .venue a:hover { color: var(--accent); border-bottom: 1px dashed var(--accent); }
+
+.paper .venue .category {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.paper .venue .workshop {
+  font-weight: normal;
+}
 
 .paper .status {
   color: var(--fg-subtle);
@@ -799,7 +794,7 @@ h1, h2, h3, h4 {
 
 .paper .abstract:not([hidden]) {
   margin: 6px 0 4px;
-  padding: 6px 0 6px 10px;
+  padding: 6px 10px 6px 10px;
   font-size: 12px;
   line-height: 1.55;
   color: var(--fg-muted);

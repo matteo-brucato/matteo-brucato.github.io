@@ -67,6 +67,12 @@
 			var venueInner = p.venueHref
 				? '<a href="' + esc(p.venueHref) + '">' + esc(p.venue) + '</a>'
 				: esc(p.venue);
+			if (p.category) {
+				venueInner += ' <span class="category">' + esc(p.category) + '</span>';
+			}
+			if (p.workshop) {
+				venueInner += ' <span class="workshop">(' + esc(p.workshop) + ')</span>';
+			}
 			metaLeft.push('<span class="venue">' + venueInner + '</span>');
 		}
 		if (p.status) {
