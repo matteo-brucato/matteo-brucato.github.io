@@ -23,6 +23,22 @@
       "category": "demo"
     },
     {
+      "id": "deql-lang-specs-arxiv",
+      "year": 2026,
+      "highlight": true,
+      "title": "DeQL: A Decision Query Language for Prescriptive Analytics over Relational Data",
+      "titleHref": "https://arxiv.org/abs/2606.19751",
+      "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
+      "venue": "arXiv",
+      "venueHref": "https://arxiv.org/abs/2606.19751",
+      "venueFull": "arXiv preprint",
+      "theme": "decisionhouse-deql",
+      "abstract": "DeQL (Decision Query Language) extends SQL to express decision queries: given options drawn from relational data, constraints from policy, and a measurable objective, a DeQL query computes the best course of action. Two constructs carry the extension: CREATE CANDIDATES, which defines the space of options from relational sources, and DECIDE, which declares decision variables, named constraints, and an objective over them. The design follows SQL's principles: the user states what to optimize while the engine chooses how to solve it, every query consumes and produces relations, and the structure of a problem stays visible to the engine. This document specifies the language (its design principles, syntax, formal grammar, and execution model) with examples spanning subset selection, allocation, assignment, scheduling, and decisions at multiple levels of aggregation, and extensions for optimization under uncertainty, inline model scoring, and time- and quality-bounded solving. It is the first version of the specification; the language is under active development, and this version fixes the core constructs on which later revisions will build.",
+      "links": [
+        { "label": "Paper", "href": "https://arxiv.org/pdf/2606.19751" }
+      ]
+    },
+    {
       "id": "intent-synthesis-2027",
       "year": 2027,
       "highlight": true,

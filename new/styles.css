@@ -235,10 +235,13 @@ h1, h2, h3, h4 {
   display: block;
 }
 
+.sb-socials a.scholar svg {
+  width: 17px;
+  height: 17px;
+}
+
 .sb-socials a.text {
-  width: auto;
-  padding: 0 8px;
-  font-size: 10.5px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
@@ -873,6 +876,23 @@ h1, h2, h3, h4 {
 
 .talks .title { color: var(--fg); font-weight: 500; }
 .talks .where { color: var(--fg-subtle); font-size: 11.5px; }
+
+.talks.talks-collapsed > li:nth-child(n+6) { display: none; }
+
+.talks-toggle {
+  font-family: inherit;
+  font-size: 11.5px;
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  margin-top: 4px;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.talks-toggle:hover {
+  color: var(--accent-hover);
+}
 
 /* Service ------------------------------------------------------------------ */
 

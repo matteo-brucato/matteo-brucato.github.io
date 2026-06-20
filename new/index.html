@@ -170,19 +170,61 @@
 		<!-- ========== TALKS ========== -->
 		<section class="section">
 			<h2 class="section-h">Talks</h2>
-			<ul class="talks">
+			<ul class="talks talks-collapsed">
 				<li>
 					<span class="yr">2024</span>
 					<span>
 						<span class="title">Enabling In-Database Decision Support with Package Queries</span><br>
-						<span class="where">Gray Systems Lab, Microsoft</span>
+						<span class="where"><a href="https://www.microsoft.com/en-us/research/group/gray-systems-lab/">Gray Systems Lab</a>, Microsoft</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2024</span>
+					<span>
+						<span class="title">Wred: Workload Reduction for Scalable Index Tuning</span><br>
+						<span class="where"><a href="https://2024.sigmod.org/">SIGMOD 2024</a>, Santiago, Chile</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2021</span>
+					<span>
+						<span class="title">Package Queries: Scalable Prescriptive Analytics Close to the Data</span><br>
+						<span class="where"><a href="https://www.cc.gatech.edu/">Georgia Tech</a>; <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2021</span>
+					<span>
+						<span class="title">Stochastic Package Queries for In-Database Prescriptive Analytics</span><br>
+						<span class="where"><a href="https://sisudata.com/">Sisu Data</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020–21</span>
+					<span>
+						<span class="title">Package Queries: Enabling Declarative and Scalable Prescriptive Analytics in Relational Data</span><br>
+						<span class="where"><a href="https://daslab.seas.harvard.edu/">Harvard, DASLab</a>; <a href="https://megagon.ai/">Megagon Labs</a>; <a href="https://dsg.csail.mit.edu/">MIT CSAIL, Data Systems Group</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020</span>
+					<span>
+						<span class="title">sPaQLTooLs: A Stochastic Package Query Interface for Scalable Constrained Optimization</span><br>
+						<span class="where"><a href="https://vldb2020.org/">VLDB 2020</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020</span>
+					<span>
+						<span class="title">Stochastic Package Queries in Probabilistic Databases</span><br>
+						<span class="where"><a href="https://sigmod2020.org/">SIGMOD 2020</a></span>
 					</span>
 				</li>
 				<li>
 					<span class="yr">2020</span>
 					<span>
 						<span class="title">Stochastic Package Queries for In-Database Constrained Optimization Under Uncertainty</span><br>
-						<span class="where"><a href="https://mitdbg.github.io/nedbday/2020/#program">NEDB</a>, MIT, Cambridge, MA</span>
+						<span class="where"><a href="https://mitdbg.github.io/nedbday/2020/#program">NEDB</a>, MIT, Cambridge, MA; <a href="https://www.informs.org/Meetings-Calendar/Annual-Meeting">INFORMS 2020</a></span>
 					</span>
 				</li>
 				<li>
@@ -221,6 +263,7 @@
 					</span>
 				</li>
 			</ul>
+			<button class="talks-toggle" type="button" aria-expanded="false"></button>
 		</section>
 
 		<!-- ========== SERVICE ========== -->
@@ -262,6 +305,27 @@
 			el.textContent = d.toLocaleString('en-US', { month: 'long', year: 'numeric' });
 		})
 		.catch(function () { /* leave fallback text */ });
+})();
+</script>
+
+<script>
+(function () {
+	var ul = document.querySelector('ul.talks');
+	var btn = document.querySelector('.talks-toggle');
+	if (!ul || !btn) return;
+	var total = ul.children.length;
+	var visible = 5;
+	function render() {
+		var collapsed = ul.classList.contains('talks-collapsed');
+		btn.textContent = collapsed ? 'Show more' : 'Show fewer';
+		btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+	}
+	if (total <= visible) { btn.style.display = 'none'; return; }
+	render();
+	btn.addEventListener('click', function () {
+		ul.classList.toggle('talks-collapsed');
+		render();
+	});
 })();
 </script>
 
