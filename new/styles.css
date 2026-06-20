@@ -643,11 +643,37 @@ h1, h2, h3, h4 {
 .paper.highlight {
   background: var(--highlight-bg);
   border-radius: 4px;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-left: 8px;
+  padding-right: 4px;
 }
 
-.paper.highlight + .paper.highlight,
+/* Adjacent highlighted papers merge into one card */
+.paper.highlight + .paper.highlight {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.paper.highlight:has(+ .paper.highlight) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Same effect in the flat publications list, where papers are wrapped in <li> */
 .pub-list > li.highlight + li.highlight {
-  margin-top: 4px;
+  padding-top: 0;
+}
+.pub-list > li.highlight + li.highlight > .paper.highlight {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.pub-list > li.highlight:has(+ li.highlight) {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.pub-list > li.highlight:has(+ li.highlight) > .paper.highlight {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .paper .meta-left {
