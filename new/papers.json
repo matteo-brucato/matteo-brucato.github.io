@@ -5,11 +5,27 @@
       "year": 2026,
       "highlight": true,
       "title": "Decisionhouse: Prescriptive Analytics in the Data Stack",
+      "titleHref": "../files/decisionhouse-vldb2026.pdf",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
       "theme": "decisionhouse-deql",
       "venueFull": "Proceedings of the VLDB Endowment",
-      "category": "vision"
+      "category": "vision",
+      "abstract": "Data platforms have evolved by making data-intensive workloads native: SQL and query optimizers eliminated bespoke data-retrieval programs; Lakehouses added first-class support for ML training and serving over the same data. Prescriptive analytics (computing optimal actions subject to constraints over data) is equally data-intensive, yet remains outside the platform: every optimization problem requires a hand-built pipeline from data extraction to solver invocation, rebuilt from scratch whenever the data or the requirements change. We propose Decisionhouses, a new class of data infrastructure that makes prescriptive analytics native. A Decisionhouse provides (i) DeQL (Decision Query Language), a declarative SQL extension where users express decision problems over relational data; (ii) automatic formulation selection that exploits query and data semantics to pick the right problem class and solver—a choice that can change a query's complexity class from NP-hard to polynomial; and (iii) end-to-end integration of optimization into the data platform, from query parsing through solver execution. Decisionhouses can help address several challenges that have kept optimization outside data platforms, including pipeline brittleness, formulation expertise, structural blindness, and scalability cliffs, and make decision-making as accessible as querying data.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "../files/decisionhouse-vldb2026.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3828612.3828629"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/osm-data/decisionhouse-analysis"
+        }
+      ]
     },
     {
       "id": "deql-studio",
@@ -35,7 +51,10 @@
       "theme": "decisionhouse-deql",
       "abstract": "DeQL (Decision Query Language) extends SQL to express decision queries: given options drawn from relational data, constraints from policy, and a measurable objective, a DeQL query computes the best course of action. Two constructs carry the extension: CREATE CANDIDATES, which defines the space of options from relational sources, and DECIDE, which declares decision variables, named constraints, and an objective over them. The design follows SQL's principles: the user states what to optimize while the engine chooses how to solve it, every query consumes and produces relations, and the structure of a problem stays visible to the engine. This document specifies the language (its design principles, syntax, formal grammar, and execution model) with examples spanning subset selection, allocation, assignment, scheduling, and decisions at multiple levels of aggregation, and extensions for optimization under uncertainty, inline model scoring, and time- and quality-bounded solving. It is the first version of the specification; the language is under active development, and this version fixes the core constructs on which later revisions will build.",
       "links": [
-        { "label": "Paper", "href": "https://arxiv.org/pdf/2606.19751" }
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/pdf/2606.19751"
+        }
       ]
     },
     {
@@ -79,13 +98,13 @@
         },
         {
           "label": "Fairlearn",
-          "href": "https://fairlearn.org/",
-          "icon": "globe"
+          "href": "https://github.com/fairlearn/fairlearn",
+          "icon": "github"
         },
         {
           "label": "Fairlearn",
-          "href": "https://github.com/fairlearn/fairlearn",
-          "icon": "github"
+          "href": "https://fairlearn.org/",
+          "icon": "globe"
         }
       ],
       "theme": "responsibility",
@@ -108,6 +127,10 @@
         {
           "label": "Extended",
           "href": "https://arxiv.org/abs/2411.17915"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3746405.3746431"
         }
       ],
       "theme": "spaql",
@@ -126,7 +149,11 @@
           "href": "https://openproceedings.org/2025/conf/edbt/paper-346.pdf"
         },
         {
-          "label": "GitHub",
+          "label": "DOI",
+          "href": "https://doi.org/10.48786/edbt.2025.112"
+        },
+        {
+          "label": "Code",
           "href": "https://github.com/softlab-unimore/fairnesseval"
         }
       ],
@@ -147,6 +174,10 @@
         {
           "label": "Paper",
           "href": "https://dl.acm.org/doi/abs/10.1145/3639305"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3639305"
         }
       ],
       "theme": "autotuning",
@@ -169,6 +200,10 @@
         {
           "label": "Extended",
           "href": "https://arxiv.org/pdf/2307.02860.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3641204.3641222"
         }
       ],
       "theme": "paql",
@@ -187,6 +222,10 @@
         {
           "label": "Paper",
           "href": "https://dl.acm.org/doi/pdf/10.1145/3565481"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3565481"
         }
       ],
       "theme": "temporal",
@@ -204,6 +243,10 @@
         {
           "label": "Paper",
           "href": "https://aclanthology.org/2021.newsum-1.14.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.18653/v1/2021.newsum-1.14"
         }
       ],
       "theme": "usability",
@@ -222,6 +265,10 @@
         {
           "label": "Paper",
           "href": "../files/NSBBGZicra21_cr.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1109/ICRA48506.2021.9561435"
         }
       ],
       "theme": "algorithms",
@@ -241,6 +288,10 @@
         {
           "label": "Paper",
           "href": "../files/p1202-brucato.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3415478.3415499"
         },
         {
           "label": "Talk",
@@ -267,6 +318,10 @@
           "href": "https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf"
         },
         {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3415478.3415494"
+        },
+        {
           "label": "Talk",
           "href": "https://www.youtube.com/watch?v=ZGzF6cBSYjo"
         }
@@ -280,7 +335,7 @@
       "id": "spaql-sigmod",
       "year": 2020,
       "title": "Stochastic Package Queries in Probabilistic Databases",
-      "titleHref": "https://dl.acm.org/doi/10.1145/3318464.3389765",
+      "titleHref": "../files/3318464.3389765.pdf",
       "authors": "Matteo Brucato, Nishant Yadav, Azza Abouzied, Peter J. Haas, Alexandra Meliou",
       "venue": "SIGMOD",
       "pages": "269-283",
@@ -292,6 +347,10 @@
         {
           "label": "Extended",
           "href": "https://arxiv.org/pdf/2103.06784.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3318464.3389765"
         },
         {
           "label": "Talk",
@@ -306,7 +365,7 @@
       "id": "cacm-paql",
       "year": 2019,
       "title": "Scalable Computation of High-Order Optimization Queries",
-      "titleHref": "https://cacm.acm.org/magazines/2019/2/234358-scalable-computation-of-high-order-optimization-queries/",
+      "titleHref": "../files/cacm-paql.pdf",
       "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
       "venue": "CACM",
       "pages": "108-116",
@@ -316,6 +375,10 @@
         {
           "label": "Paper",
           "href": "../files/cacm-paql.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3299881"
         },
         {
           "label": "Tech Perspective (Chaudhuri)",
@@ -336,6 +399,10 @@
       "pages": "693-718",
       "awardNote": "Invited journal paper — Special Issue on Best Papers of VLDB 2016",
       "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1007/s00778-017-0483-4"
+        },
         {
           "label": "Pre-print",
           "href": "../files/scalable-paql.pdf"
@@ -363,6 +430,10 @@
         {
           "label": "Paper",
           "href": "https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3093754.3093761"
         }
       ],
       "theme": "paql",
@@ -407,6 +478,10 @@
           "href": "http://arxiv.org/pdf/1512.03564v2.pdf"
         },
         {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/2904483.2904489"
+        },
+        {
           "label": "Slides",
           "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-presentation-share.pdf"
         },
@@ -434,6 +509,10 @@
           "href": "http://packagebuilder.cs.umass.edu/papers/p3-brucato.pdf"
         },
         {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/2658840.2658843"
+        },
+        {
           "label": "Slides",
           "href": "http://packagebuilder.cs.umass.edu/papers/package-recomm-slides-web.pdf"
         }
@@ -458,6 +537,10 @@
           "href": "http://packagebuilder.cs.umass.edu/papers/p1069-brucato.pdf"
         },
         {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/2733004.2733038"
+        },
+        {
           "label": "Poster",
           "href": "http://packagebuilder.cs.umass.edu/papers/main-poster.pdf"
         }
@@ -480,6 +563,10 @@
         {
           "label": "Paper",
           "href": "http://packagebuilder.cs.umass.edu/papers/p1613-fernandes.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/2588555.2612667"
         }
       ],
       "theme": "paql",
@@ -491,7 +578,7 @@
       "id": "metric-spaces",
       "year": 2014,
       "title": "Metric Spaces for Temporal Information Retrieval",
-      "titleHref": "http://link.springer.com/chapter/10.1007/978-3-319-06028-6_32",
+      "titleHref": "../files/84160385_e.pdf",
       "authors": "Matteo Brucato, Danilo Montesi",
       "venue": "ECIR",
       "location": "Amsterdam, the Netherlands",
@@ -500,6 +587,10 @@
         {
           "label": "Paper",
           "href": "../files/84160385_e.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1007/978-3-319-06028-6_32"
         },
         {
           "label": "Slides",
@@ -514,7 +605,7 @@
       "id": "named-temporal",
       "year": 2013,
       "title": "Recognising and Interpreting Named Temporal Expressions",
-      "titleHref": "https://www.academia.edu/4477889/Recognising_and_Interpreting_Named_Temporal_Expressions",
+      "titleHref": "../files/named-temporal-ranlp2013.pdf",
       "authors": "Matteo Brucato, Leon Derczynski, Hector Llorens, Kalina Bontcheva, Christian S. Jensen",
       "venue": "RANLP",
       "location": "Hissar, Bulgaria",
@@ -524,7 +615,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "http://aclweb.org/anthology/R/R13/R13-1015.pdf"
+          "href": "../files/named-temporal-ranlp2013.pdf"
         }
       ],
       "theme": "temporal",

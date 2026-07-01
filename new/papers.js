@@ -34,6 +34,8 @@
 
 	function iconForLink(l) {
 		if (l.icon && ICONS[l.icon]) return ICONS[l.icon];
+		var href = String(l.href || '').toLowerCase();
+		if (href.indexOf('github.com') !== -1) return ICONS.github;
 		var label = String(l.label).toLowerCase();
 		if (label.indexOf('github') !== -1) return ICONS.github;
 		if (label.indexOf('talk') !== -1 || label.indexOf('video') !== -1) return ICONS.video;
