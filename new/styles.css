@@ -483,6 +483,11 @@ h1, h2, h3, h4 {
   background: #292524;
   border: 3px solid #ffffff;
   box-shadow: 0 0 0 1px var(--border);
+  padding: 1px;
+}
+
+.tl-logo.umass {
+  padding: 1px;
 }
 
 .tl-role { font-size: 14px; font-weight: 600; color: var(--fg); }
