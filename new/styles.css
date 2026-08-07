@@ -157,7 +157,7 @@ h1, h2, h3, h4 {
   width: 160px; height: 160px;
   border-radius: 0;
   overflow: hidden;
-  margin: 0 0 16px;
+  margin: 0 auto 16px;
   background: transparent;
   border: 0;
 }
@@ -173,11 +173,12 @@ h1, h2, h3, h4 {
 }
 
 .sb-name {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.3px;
   margin: 0 0 4px;
+  text-align: center;
 }
 
 .sb-role {
@@ -185,6 +186,7 @@ h1, h2, h3, h4 {
   color: var(--fg-muted);
   line-height: 1.4;
   margin: 0 0 12px;
+  text-align: center;
 }
 
 .sb-role .org { display: block; color: var(--fg-subtle); }
@@ -195,6 +197,7 @@ h1, h2, h3, h4 {
   font-size: 12.5px;
   margin: 10px 0;
   word-break: break-all;
+  text-align: center;
 }
 
 .sb-contact a {
@@ -207,6 +210,7 @@ h1, h2, h3, h4 {
 .sb-socials {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
   margin: 8px 0 14px;
 }

@@ -34,9 +34,16 @@
       "title": "DeQL Studio: Declarative Decision-Making over Relational Data",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
+      "pages": "4614-4617",
       "theme": "decisionhouse-deql",
       "venueFull": "Proceedings of the VLDB Endowment",
-      "category": "demo"
+      "category": "demo",
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3827998.3828079"
+        }
+      ]
     },
     {
       "id": "deql-lang-specs-arxiv",
