@@ -32,16 +32,26 @@
       "year": 2026,
       "highlight": true,
       "title": "DeQL Studio: Declarative Decision-Making over Relational Data",
+      "titleHref": "../files/deql-studio-vldb2026.pdf",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
       "pages": "4614-4617",
       "theme": "decisionhouse-deql",
       "venueFull": "Proceedings of the VLDB Endowment",
       "category": "demo",
+      "abstract": "Databases separate what from how: users declare what data they want, and a query optimizer decides how to compute it efficiently. Decision-making has no such separation. Computing optimal actions means solving a mathematical optimization problem, and the user must choose how. That choice is the formulation, and alternative formulations reach the same optimum but can differ in solving time by orders of magnitude. A transportation problem, for instance, can be cast as a general mixed-integer linear program (MILP) or, far faster, as min-cost network flow (MCF). We demonstrate DeQL (Decision Query Language), a declarative SQL extension where users state, over relational data, what to decide, what constraints to respect, and what to optimize; the DeQL Planner chooses the formulation. In DeQL Studio, our interactive interface, attendees write DeQL queries, inspect the formulation the Planner selects, and run conventional scripts for comparison: on a GPU allocation problem with 2.7 million possible assignments, the conventional MILP takes Gurobi 26 s to solve to optimality, while the Planner detects the bipartite supply-and-demand structure directly in the query and selects MCF, and the engine reaches the same optimum in 0.88 s, 30× faster. Attendees edit queries and data, watching the engine adapt: removing one constraint changes the detected structure and the Planner switches formulation, while editing data warm-starts the solver from the previous solution.",
       "links": [
+        {
+          "label": "Paper",
+          "href": "../files/deql-studio-vldb2026.pdf"
+        },
         {
           "label": "DOI",
           "href": "https://doi.org/10.14778/3827998.3828079"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/osm-data/deql-studio-analysis"
         }
       ]
     },
