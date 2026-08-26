@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Publications · Matteo Brucato</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon.png">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-82SB56909H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-82SB56909H');
+	</script>
+
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				if (stored === 'dark' || stored === 'light') {
+					document.documentElement.setAttribute('data-theme', stored);
+				}
+			} catch (e) {}
+		})();
+	</script>
+</head>
+<body>
+
+<div class="page">
+
+	<aside class="sidebar" id="sidebar-slot"></aside>
+	<script src="sidebar.js"></script>
+
+	<main class="main">
+
+		<p class="intro" style="margin-bottom: 20px;">
+			<a href="index.html" style="color: var(--fg-muted); border-bottom: 1px dashed var(--border);">← Back to main page</a>
+		</p>
+
+		<section class="section" style="margin-top: 8px;">
+			<h2 class="section-h">Publications</h2>
+
+			<div class="research-umbrella" style="margin-bottom: 18px;">
+				Chronological list, newest first. For a thematic view, see the <a href="index.html#research">Research</a> section on the main page.
+			</div>
+
+			<div id="publications-slot"></div>
+		</section>
+
+	</main>
+
+</div>
+
+<script src="papers.js"></script>
+
+</body>
+</html>

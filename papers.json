@@ -1,0 +1,707 @@
+{
+  "papers": [
+    {
+      "id": "decisionhouse",
+      "year": 2026,
+      "highlight": true,
+      "title": "Decisionhouse: Prescriptive Analytics in the Data Stack",
+      "titleHref": "https://osm-data.com/papers/decisionhouse/",
+      "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
+      "venue": "VLDB",
+      "theme": "decisionhouse-deql",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "category": "vision",
+      "summary": "A new data system category that makes decisions natively declarative — opening research in problem structure detection, formulation selection, and integrating optimization into the platform.",
+      "abstract": "Data platforms have evolved by making data-intensive workloads native: SQL and query optimizers eliminated bespoke data-retrieval programs; Lakehouses added first-class support for ML training and serving over the same data. Prescriptive analytics (computing optimal actions subject to constraints over data) is equally data-intensive, yet remains outside the platform: every optimization problem requires a hand-built pipeline from data extraction to solver invocation, rebuilt from scratch whenever the data or the requirements change. We propose Decisionhouses, a new class of data infrastructure that makes prescriptive analytics native. A Decisionhouse provides (i) DeQL (Decision Query Language), a declarative SQL extension where users express decision problems over relational data; (ii) automatic formulation selection that exploits query and data semantics to pick the right problem class and solver—a choice that can change a query's complexity class from NP-hard to polynomial; and (iii) end-to-end integration of optimization into the data platform, from query parsing through solver execution. Decisionhouses can help address several challenges that have kept optimization outside data platforms, including pipeline brittleness, formulation expertise, structural blindness, and scalability cliffs, and make decision-making as accessible as querying data.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://osm-data.com/papers/decisionhouse/"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3828612.3828629"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/osm-data/decisionhouse-analysis"
+        }
+      ]
+    },
+    {
+      "id": "deql-studio",
+      "year": 2026,
+      "highlight": true,
+      "title": "DeQL Studio: Declarative Decision-Making over Relational Data",
+      "titleHref": "https://osm-data.com/papers/deql-studio/",
+      "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
+      "venue": "VLDB",
+      "pages": "4614-4617",
+      "theme": "decisionhouse-deql",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "category": "demo",
+      "summary": "Interactive demo where attendees write DeQL queries and watch the Planner pick a formulation live, and compare with the hand-written scripts they'd otherwise ship.",
+      "abstract": "Databases separate what from how: users declare what data they want, and a query optimizer decides how to compute it efficiently. Decision-making has no such separation. Computing optimal actions means solving a mathematical optimization problem, and the user must choose how. That choice is the formulation, and alternative formulations reach the same optimum but can differ in solving time by orders of magnitude. A transportation problem, for instance, can be cast as a general mixed-integer linear program (MILP) or, far faster, as min-cost network flow (MCF). We demonstrate DeQL (Decision Query Language), a declarative SQL extension where users state, over relational data, what to decide, what constraints to respect, and what to optimize; the DeQL Planner chooses the formulation. In DeQL Studio, our interactive interface, attendees write DeQL queries, inspect the formulation the Planner selects, and run conventional scripts for comparison: on a GPU allocation problem with 2.7 million possible assignments, the conventional MILP takes Gurobi 26 s to solve to optimality, while the Planner detects the bipartite supply-and-demand structure directly in the query and selects MCF, and the engine reaches the same optimum in 0.88 s, 30× faster. Attendees edit queries and data, watching the engine adapt: removing one constraint changes the detected structure and the Planner switches formulation, while editing data warm-starts the solver from the previous solution.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://osm-data.com/papers/deql-studio/"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3827998.3828079"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/osm-data/deql-studio-analysis"
+        }
+      ]
+    },
+    {
+      "id": "deql-lang-specs-arxiv",
+      "year": 2026,
+      "highlight": true,
+      "title": "DeQL: A Decision Query Language for Prescriptive Analytics over Relational Data",
+      "titleHref": "https://arxiv.org/abs/2606.19751",
+      "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
+      "venue": "arXiv",
+      "venueHref": "https://arxiv.org/abs/2606.19751",
+      "venueFull": "arXiv preprint",
+      "theme": "decisionhouse-deql",
+      "summary": "The DeQL language specification.",
+      "abstract": "DeQL (Decision Query Language) extends SQL to express decision queries: given options drawn from relational data, constraints from policy, and a measurable objective, a DeQL query computes the best course of action. Two constructs carry the extension: CREATE CANDIDATES, which defines the space of options from relational sources, and DECIDE, which declares decision variables, named constraints, and an objective over them. The design follows SQL's principles: the user states what to optimize while the engine chooses how to solve it, every query consumes and produces relations, and the structure of a problem stays visible to the engine. This document specifies the language (its design principles, syntax, formal grammar, and execution model) with examples spanning subset selection, allocation, assignment, scheduling, and decisions at multiple levels of aggregation, and extensions for optimization under uncertainty, inline model scoring, and time- and quality-bounded solving. It is the first version of the specification; the language is under active development, and this version fixes the core constructs on which later revisions will build.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/pdf/2606.19751"
+        }
+      ]
+    },
+    {
+      "id": "intent-synthesis-2027",
+      "year": 2027,
+      "highlight": true,
+      "title": "Example-Driven Intent Synthesis for Constrained Data Bundle Retrieval: Focused Text Snippet Extraction and Beyond",
+      "authors": "Whanhee Cho, Kuangfei Long, Mahmood Jasim, Matteo Brucato, Alexandra Meliou, Peter Haas, Anna Fariha",
+      "venue": "VLDB",
+      "status": "under review",
+      "theme": "usability",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "links": [
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/abs/2605.19246"
+        }
+      ],
+      "titleHref": "https://arxiv.org/abs/2605.19246",
+      "abstract": "Selecting a bundle of items that collectively satisfies constraints is a fundamental task across databases, recommender systems, and text summarization. Unlike traditional retrieval that returns individual or top-k items, bundle retrieval is inherently combinatorial and, in general, NP-hard. Although package queries can efficiently retrieve bundles given a well-formed query, two key user-centric challenges remain: (1) expressing and tuning multi-dimensional bundle intent through a user-friendly interface, and (2) ensuring feasibility when the query yields empty results. We introduce Ex2Bundle, an Example-driven Bundle retrieval framework that enables users to specify their intent through example bundles and automatically synthesizes package queries that capture the intent implicit in those example bundles via aggregate constraints. Ex2Bundle also addresses a challenge unique to bundle retrieval: when inferred aggregate constraints are infeasible over the target data, our data-aware constraint relaxation minimally adjusts the constraint bounds while preserving alignment with user intent. We instantiate a specific application of focused text snippet extraction by example to demonstrate the efficacy of the Ex2Bundle framework. Extensive experiments over real-world datasets and a user study demonstrate that Ex2Bundle improves usability and consistently returns intent-aligned bundles even under distributional shifts of the target database."
+    },
+    {
+      "id": "speeding-fairness-reductions",
+      "year": 2026,
+      "highlight": true,
+      "title": "Speeding up fairness reductions",
+      "titleHref": "files/speeding-fairness-reductions-tmlr2026.pdf",
+      "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
+      "venue": "TMLR",
+      "venueHref": "https://jmlr.org/tmlr/",
+      "_summary": "How to make fairness checks fast at production scale — performance improvements built into Fairlearn, the open-source library many teams rely on to reduce AI bias.",
+      "abstract": "We study the problem of fair classification, where the goal is to optimize classification accuracy subject to fairness constraints. This type of problem occurs in many real-world applications, where we seek to assure that a deployed AI system does not disproportionally impact historically disadvantaged groups. One of the leading approaches in the literature is the reduction approach (Agarwal et al., 2018; 2019), which enjoys many favorable properties. For instance, it supports a wide range of fairness constraints and model families and is usually easy to incorporate in existing ML pipelines. The reduction approach acts as a wrapper around a standard ML algorithm and obtains a model that satisfies fairness constraints by repeatedly running a fairness-unaware base algorithm. A typical number of iterations is around 100, meaning that the reduction approach can be up to 100 times slower than the base algorithm, which limits its applicability. To overcome this limitation, we introduce two algorithmic innovations. First, we interleave the exponentiated gradient updates of the standard reduction approach with column-generation updates, which leads to a decrease in the number of calls to the base algorithm. Second, we introduce adaptive sampling, which decreases the sizes of the datasets used in the calls to the base algorithm. We conduct comprehensive experiments to evaluate efficacy of our improvements, showing that our two innovations speed up the reduction approach by an order of magnitude without sacrificing the quality of the resulting solutions.",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/speeding-fairness-reductions-tmlr2026.pdf"
+        },
+        {
+          "label": "OpenReview",
+          "href": "https://openreview.net/forum?id=C0AdL3r1Dc"
+        },
+        {
+          "label": "Fairlearn",
+          "href": "https://github.com/fairlearn/fairlearn",
+          "icon": "github"
+        },
+        {
+          "label": "Fairlearn",
+          "href": "https://fairlearn.org/",
+          "icon": "globe"
+        }
+      ],
+      "theme": "responsibility",
+      "venueFull": "Transactions on Machine Learning Research"
+    },
+    {
+      "id": "sketchrefine",
+      "year": 2025,
+      "title": "Stochastic SketchRefine: Scaling In-Database Decision-Making under Uncertainty to Millions of Tuples",
+      "titleHref": "https://www.vldb.org/pvldb/vol18/p3106-haque.pdf",
+      "authors": "Riddho Ridwanul Haque, Anh Mai, Matteo Brucato, Azza Abouzied, Peter Haas, Alexandra Meliou",
+      "_summary": "How to compute risk-aware optimal decisions across large datasets orders of magnitude faster — making 'portfolio-style' optimization tractable at database scale.",
+      "abstract": "Decision making under uncertainty often requires choosing packages, or bags of tuples, that collectively optimize expected outcomes while limiting risks. Processing Stochastic Package Queries (SPQs) involves solving very large optimization problems on uncertain data. Monte Carlo methods create numerous scenarios, or sample realizations of the stochastic attributes of all the tuples, and generate packages with optimal objective values across these scenarios. The number of scenarios needed for accurate approximation—and hence the size of the optimization problem when using prior methods—increases with variance in the data, and the search space of the optimization problem increases exponentially with the number of tuples in the relation. Existing solvers take hours to process SPQs on large relations containing stochastic attributes with high variance. Besides enriching the SPaQL language to capture a broader class of risk specifications, we make two fundamental contributions toward scalable SPQ processing. First, we propose risk-constraint linearization (RCL), which converts SPQs into Integer Linear Programs (ILPs) whose size is independent of the number of scenarios used. Solving these ILPs gives us feasible and near-optimal packages. Second, we propose Stochastic SketchRefine, a divide and conquer framework that breaks down a large stochastic optimization problem into subproblems involving smaller subsets of tuples. Our experiments show that, together, RCL and Stochastic SketchRefine produce high-quality packages in orders of magnitude lower runtime than the state of the art.",
+      "venue": "VLDB",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://www.vldb.org/pvldb/vol18/p3106-haque.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/abs/2411.17915"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3746405.3746431"
+        }
+      ],
+      "theme": "spaql",
+      "venueFull": "Proceedings of the VLDB Endowment"
+    },
+    {
+      "id": "fairnesseval",
+      "year": 2025,
+      "title": "FairnessEval: A Framework for Evaluating Fairness of Machine Learning Models",
+      "titleHref": "https://openproceedings.org/2025/conf/edbt/paper-346.pdf",
+      "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
+      "venue": "EDBT",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://openproceedings.org/2025/conf/edbt/paper-346.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.48786/edbt.2025.112"
+        },
+        {
+          "label": "Code",
+          "href": "https://github.com/softlab-unimore/fairnesseval"
+        }
+      ],
+      "theme": "responsibility",
+      "venueFull": "International Conference on Extending Database Technology",
+      "abstract": "Automated decision-making systems can potentially introduce biases, raising ethical concerns. This has led to the development of numerous bias mitigation techniques. Choosing a fairness-aware model often requires trial and error, as it is difficult to predict whether a mitigation measure will meet user requirements or how it will affect metrics like accuracy and runtime. Existing fairness toolkits lack a comprehensive benchmarking framework. To bridge this gap, we present FairnessEval, a framework specifically designed to evaluate fairness in Machine Learning models. FairnessEval streamlines dataset preparation, fairness evaluation, and result presentation, while also offering customization options. In this demonstration, we highlight the functionality of FairnessEval in the selection and validation of fairness-aware models. We compare various approaches and simulate deployment scenarios to showcase FairnessEval effectiveness.",
+      "category": "demo"
+    },
+    {
+      "id": "wred",
+      "year": 2024,
+      "title": "Wred: Workload Reduction for Scalable Index Tuning",
+      "titleHref": "https://dl.acm.org/doi/abs/10.1145/3639305",
+      "authors": "Matteo Brucato, Tarique Siddiqui, Wentao Wu, Vivek Narasayya, Surajit Chaudhuri",
+      "venue": "SIGMOD",
+      "pages": "1-26",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://dl.acm.org/doi/abs/10.1145/3639305"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3639305"
+        }
+      ],
+      "theme": "autotuning",
+      "venueFull": "ACM SIGMOD International Conference on Management of Data",
+      "abstract": "Modern database systems offer index-tuning advisors that automatically identify a set of indexes to improve workload performance. Advisors leverage the optimizer's what-if API to optimize a query for a hypothetical index configuration. Because what-if calls constitute a major bottleneck of index tuning, existing techniques, such as workload compression, help reduce the number of what-if calls to speed up tuning. Unfortunately, even with small workloads and few what-if calls, tuning can still take hours due to the complexity of the queries (e.g., the number of joins, filters, group-by and order-by clauses), which increases their optimization time. This paper introduces workload reduction, a new complementary technique aimed at expediting index tuning by decreasing individual what-if call time without significantly affecting the quality of index tuning. We present an efficient workload reduction algorithm, called Wred, which rewrites each query in the original workload to eliminate column and table expressions unlikely to benefit from indexes, thereby accelerating what-if calls. We study its complexity and ability to maintain high index quality. We perform an extensive evaluation over industry benchmarks and real-world customer workloads, which shows that Wred results in a 3x median speedup in tuning efficiency over an industrial-strength state-of-the-art index advisor, with only a 3.7% median loss in improvement—where improvement is the total workload cost as estimated by the query optimizer—and results in up to 24.7x speedup with 1.8% improvement loss. Furthermore, combining Wred and Isum (a state-of-the-art workload compression technique for index tuning) results in higher speedups than either of the two techniques alone, with 10.5x median speedup and 5% median improvement loss."
+    },
+    {
+      "id": "scaling-package-billion",
+      "year": 2024,
+      "title": "Scaling Package Queries to a Billion Tuples via Hierarchical Partitioning and Customized Optimization",
+      "titleHref": "https://www.vldb.org/pvldb/vol17/p1146-mai.pdf",
+      "authors": "Anh L. Mai, Pengyu Wang, Azza Abouzied, Matteo Brucato, Peter J. Haas, Alexandra Meliou",
+      "venue": "VLDB",
+      "pages": "1146-1158",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://www.vldb.org/pvldb/vol17/p1146-mai.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/pdf/2307.02860.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3641204.3641222"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "abstract": "A package query returns a package—a multiset of tuples—that maximizes or minimizes a linear objective function subject to linear constraints, thereby enabling in-database decision support. Prior work has established the equivalence of package queries to Integer Linear Programs (ILPs) and developed the SketchRefine algorithm for package query processing. While this algorithm was an important first step toward supporting prescriptive analytics scalably inside a relational database, it struggles when the data size grows beyond a few hundred million tuples or when the constraints become very tight. In this paper, we present Progressive Shading, a novel algorithm for processing package queries that can scale efficiently to billions of tuples and gracefully handle tight constraints. Progressive Shading solves a sequence of optimization problems over a hierarchy of relations, each resulting from an ever-finer partitioning of the original tuples into homogeneous groups until the original relation is obtained. This strategy avoids the premature discarding of high-quality tuples that can occur with SketchRefine. Our novel partitioning scheme, Dynamic Low Variance, can handle very large relations with multiple attributes and can dynamically adapt to both concentrated and spread-out sets of attribute values, provably outperforming traditional partitioning schemes such as kd-tree. We further optimize our system by replacing our off-the-shelf optimization software with customized ILP and LP solvers, called Dual Reducer and Parallel Dual Simplex respectively, that are highly accurate and orders of magnitude faster."
+    },
+    {
+      "id": "tois-ranking",
+      "year": 2022,
+      "title": "Ranking Models for the Temporal Dimension of Text",
+      "titleHref": "https://dl.acm.org/doi/pdf/10.1145/3565481",
+      "authors": "Stefano Giovanni Rizzo, Matteo Brucato, Danilo Montesi",
+      "venue": "ACM TOIS",
+      "venueHref": "https://dl.acm.org/journal/tois",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://dl.acm.org/doi/pdf/10.1145/3565481"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3565481"
+        }
+      ],
+      "theme": "temporal",
+      "venueFull": "ACM Transactions on Information Systems",
+      "abstract": "Temporal features of text have been shown to improve clustering and organization of documents, text classification, visualization, and ranking. Temporal ranking models consider the temporal expressions found in text (e.g., \"in 2021\" or \"last year\") as time units, rather than as keywords, to define a temporal relevance and improve ranking. This article introduces a new class of ranking models called Temporal Metric Space Models (TMSM), based on a new domain for representing temporal information found in documents and queries, where each temporal expression is represented as a time interval. Furthermore, we introduce a new frequency-based baseline called Temporal BM25 (TBM25). We evaluate the effectiveness of each proposed metric against a purely textual baseline, as well as several variations of the metrics themselves, where we change the aggregate function, the time granularity and the combination weight. Our extensive experiments on five test collections show statistically significant improvements of TMSM and TBM25 over state-of-the-art temporal ranking models. Combining the temporal similarity scores with the text similarity scores always improves the results, when the combination weight is between 2% and 6% for the temporal scores. This is true also for test collections where only 5% of queries contain explicit temporal expressions."
+    },
+    {
+      "id": "subsume",
+      "year": 2021,
+      "title": "SubSumE: A Dataset for Subjective Summary Extraction from Wikipedia Documents",
+      "titleHref": "https://aclanthology.org/2021.newsum-1.14.pdf",
+      "authors": "Nishant Yadav, Matteo Brucato, Anna Fariha, Oscar Yongquist, Julian Killingback, Alexandra Meliou, Peter J. Haas",
+      "venue": "EMNLP",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://aclanthology.org/2021.newsum-1.14.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.18653/v1/2021.newsum-1.14"
+        }
+      ],
+      "theme": "usability",
+      "venueFull": "Proceedings of the Workshop on New Frontiers in Summarization, co-located with EMNLP",
+      "abstract": "Many applications require generation of summaries tailored to the user's information needs, i.e., their intent. Methods that express intent via explicit user queries fall short when query interpretation is subjective. Several datasets exist for summarization with objective intents where, for each document and intent (e.g., \"weather\"), a single summary suffices for all users. No datasets exist, however, for subjective intents (e.g., \"interesting places\") where different users will provide different summaries. We present SUBSUME, the first dataset for evaluation of SUBjective SUMmary Extraction systems. SUBSUME contains 2,200 (document, intent, summary) triplets over 48 Wikipedia pages, with ten intents of varying subjectivity, provided by 103 individuals over Mechanical Turk. We demonstrate statistically that the intents in SUBSUME vary systematically in subjectivity. To indicate SUBSUME's usefulness, we explore a collection of baseline algorithms for subjective extractive summarization and show that (i) as expected, example-based approaches better capture subjective intents than query-based ones, and (ii) there is ample scope for improving upon the baseline algorithms, thereby motivating further research on this challenging problem.",
+      "workshop": "NewSum"
+    },
+    {
+      "id": "mdp-abstractions",
+      "year": 2021,
+      "title": "Solving Markov Decision Processes with Partial State Abstractions",
+      "titleHref": "files/NSBBGZicra21_cr.pdf",
+      "authors": "Samer B. Nashed, Justin Svegliato, Matteo Brucato, Connor Basich, Rod Grupen, Shlomo Zilberstein",
+      "venue": "ICRA",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/NSBBGZicra21_cr.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1109/ICRA48506.2021.9561435"
+        }
+      ],
+      "theme": "algorithms",
+      "venueFull": "IEEE International Conference on Robotics and Automation",
+      "abstract": "Autonomous systems often use approximate planners that exploit state abstractions to solve large MDPs in real-time decision-making problems. However, these planners can eliminate details needed to produce effective behavior in autonomous systems. We therefore propose a novel model, a partially abstract MDP, with a set of abstract states that each compress a set of ground states to condense irrelevant details and a set of ground states that expand from a set of expanded abstract states to retain relevant details. This paper offers (1) a definition of a partially abstract MDP that (2) generalizes its ground MDP and its abstract MDP and exhibits bounded optimality depending on its abstract MDP along with (3) a lazy algorithm for planning and execution in autonomous systems. The result is a scalable approach that computes near-optimal solutions to large problems in minutes rather than hours."
+    },
+    {
+      "id": "spaql-tools",
+      "year": 2020,
+      "title": "sPaQLTooLs: A Stochastic Package Query Interface for Scalable Constrained Optimization",
+      "titleHref": "files/p1202-brucato.pdf",
+      "authors": "Matteo Brucato, Miro Mannino, Azza Abouzied, Peter J. Haas, Alexandra Meliou",
+      "venue": "VLDB",
+      "award": "Best Demo",
+      "awardNote": "Best Demonstration Award at VLDB 2020",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/p1202-brucato.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3415478.3415499"
+        },
+        {
+          "label": "Talk",
+          "href": "https://www.youtube.com/watch?v=1v5KevGKbfE"
+        }
+      ],
+      "theme": "spaql",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "abstract": "Everyone needs to make decisions under uncertainty and with limited resources, e.g., an investor who is building a stock portfolio subject to an investment budget and a bounded risk tolerance. Doing this with current technology is hard. There is a disconnect between software tools for data management, stochastic predictive modeling (e.g., simulation of future stock prices), and optimization; this leads to cumbersome analytical workflows. Moreover, current methods do not scale. To handle a broad class of uncertainty models, analysts approximate the original stochastic optimization problem by a large deterministic optimization problem that incorporates many \"scenarios\", i.e., sample realizations of the uncertain data values. For large problems, a huge number of scenarios is required, often causing the solver to fail. We demonstrate sPaQLTooLs, a system for in-database specification and scalable solution of constrained optimization problems. The key ingredients are (i) a database-oriented specification of constrained stochastic optimization problems as \"stochastic package queries\" (SPQs), (ii) use of a Monte Carlo database to incorporate stochastic predictive models, and (iii) a new SummarySearch algorithm for scalably solving SPQs with approximation guarantees. In this demonstration, the attendees will experience first-hand the difficulty of manually constructing feasible and high-quality portfolios, using real-world stock market data. We will then demonstrate how SummarySearch can easily and efficiently help them find very good portfolios, while being orders of magnitude faster than prior methods.",
+      "category": "demo"
+    },
+    {
+      "id": "sudocu",
+      "year": 2020,
+      "title": "SuDocu: Summarizing Documents by Example",
+      "titleHref": "https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf",
+      "authors": "Anna Fariha, Matteo Brucato, Peter J. Haas, Alexandra Meliou",
+      "venue": "VLDB",
+      "award": "Best Demo Runner-up",
+      "awardNote": "Best Demonstration Runner-Up Award at VLDB 2020",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/3415478.3415494"
+        },
+        {
+          "label": "Talk",
+          "href": "https://www.youtube.com/watch?v=ZGzF6cBSYjo"
+        }
+      ],
+      "theme": "usability",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "abstract": "Text document summarization refers to the task of producing a brief representation of a document for easy human consumption. Existing text summarization techniques mostly focus on generic summarization, but users often require personalized summarization that targets their specific preferences and needs. However, precisely expressing preferences is challenging, and current methods are often ambiguous, outside the user's control, or require costly training data. We propose a novel and effective way to express summarization intent (preferences) via examples: the user provides a few example summaries for a small number of documents in a collection, and the system summarizes the rest. We demonstrate SuDocu, an example-based personalized DOCUment SUmmarization system. Through a simple interface, SuDocu allows the users to provide example summaries, learns the summarization intent from the examples, and produces summaries for new documents that reflect the user's summarization intent. SuDocu further explains the captured summarization intent in the form of a package query, an extension of a traditional SQL query that handles complex constraints and preferences over answer sets. SuDocu combines topic modeling, semantic similarity discovery, and in-database optimization in a novel way to achieve example-driven document summarization. We demonstrate how SuDocu can detect complex summarization intents from a few example summaries and produce accurate summaries for new documents effectively and efficiently.",
+      "category": "demo"
+    },
+    {
+      "id": "spaql-sigmod",
+      "year": 2020,
+      "title": "Stochastic Package Queries in Probabilistic Databases",
+      "titleHref": "files/3318464.3389765.pdf",
+      "authors": "Matteo Brucato, Nishant Yadav, Azza Abouzied, Peter J. Haas, Alexandra Meliou",
+      "venue": "SIGMOD",
+      "pages": "269-283",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/3318464.3389765.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "https://arxiv.org/pdf/2103.06784.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3318464.3389765"
+        },
+        {
+          "label": "Talk",
+          "href": "https://www.youtube.com/watch?v=UrEOEplK06I"
+        }
+      ],
+      "theme": "spaql",
+      "venueFull": "ACM SIGMOD International Conference on Management of Data",
+      "abstract": "We provide methods for in-database support of decision making under uncertainty. Many important decision problems correspond to selecting a package (bag of tuples in a relational database) that jointly satisfy a set of constraints while minimizing some overall cost function; in most real-world problems, the data is uncertain. We provide methods for specifying—via a SQL extension—and processing stochastic package queries (SPQs), in order to solve optimization problems over uncertain data, right where the data resides. Prior work in stochastic programming uses Monte Carlo methods where the original stochastic optimization problem is approximated by a large deterministic optimization problem that incorporates many scenarios, i.e., sample realizations of the uncertain data values. For large database tables, however, a huge number of scenarios is required, leading to poor performance and, often, failure of the solver software. We therefore provide a novel SummarySearch algorithm that, instead of trying to solve a large deterministic problem, seamlessly approximates it via a sequence of smaller problems defined over carefully crafted summaries of the scenarios that accelerate convergence to a feasible and near-optimal solution. Experimental results on our prototype system show that SummarySearch can be orders of magnitude faster than prior methods at finding feasible and high-quality packages."
+    },
+    {
+      "id": "cacm-paql",
+      "year": 2019,
+      "title": "Scalable Computation of High-Order Optimization Queries",
+      "titleHref": "files/cacm-paql.pdf",
+      "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
+      "venue": "CACM",
+      "pages": "108-116",
+      "award": "Research Highlight",
+      "awardNote": "CACM Research Highlight",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/cacm-paql.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3299881"
+        },
+        {
+          "label": "Tech Perspective (Chaudhuri)",
+          "href": "https://cacm.acm.org/magazines/2019/2/234345-technical-perspective-to-do-or-not-to-do"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "Communications of the ACM",
+      "abstract": "Constrained optimization problems are at the heart of significant applications in a broad range of domains, including finance, transportation, manufacturing, and healthcare. Modeling and solving these problems has relied on application-specific solutions, which are often complex, error-prone, and do not generalize. Our goal is to create a domain-independent, declarative approach, supported and powered by the system where the data relevant to these problems typically resides: the database. We present a complete system that supports package queries, a new query model that extends traditional database queries to handle complex constraints and preferences over answer sets, allowing the declarative specification and efficient evaluation of a significant class of constrained optimization problems—integer linear programs (ILP)—within a database."
+    },
+    {
+      "id": "vldbj-paql",
+      "year": 2018,
+      "title": "Package queries: efficient and scalable computation of high-order constraints",
+      "titleHref": "https://doi.org/10.1007/s00778-017-0483-4",
+      "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
+      "venue": "VLDBJ",
+      "pages": "693-718",
+      "awardNote": "Invited journal paper — Special Issue on Best Papers of VLDB 2016",
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1007/s00778-017-0483-4"
+        },
+        {
+          "label": "Pre-print",
+          "href": "files/scalable-paql.pdf"
+        },
+        {
+          "label": "Publication",
+          "href": "https://link.springer.com/"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "The VLDB Journal",
+      "abstract": "Traditional database queries follow a simple model: they define constraints that each tuple in the result must satisfy. This model is computationally efficient, as the database system can evaluate the query conditions on each tuple individually. However, many practical, real-world problems require a collection of result tuples to satisfy constraints collectively, rather than individually. In this paper, we present package queries, a new query model that extends traditional database queries to handle complex constraints and preferences over answer sets. We develop a full-fledged package query system, implemented on top of a traditional database engine. Our work makes several contributions. (1) We design PaQL, a SQL-based query language that supports the declarative specification of package queries. We prove that PaQL is at least as expressive as integer linear programming, and therefore, evaluation of package queries is NP-hard. (2) We present a fundamental evaluation strategy that combines the capabilities of databases and constraint optimization solvers to derive solutions to package queries. The core of our approach is a set of translation rules that transform a package query to an integer linear program. (3) We introduce an offline data partitioning strategy allowing query evaluation to scale to large data sizes. (4) We introduce SketchRefine, a scalable algorithm for package evaluation, with strong approximation guarantees [(1 ± ε)-factor approximation]. (5) We present a method for parallelizing the Refine phase of SketchRefine. (6) We present an empirical study of the efficiency gains of providing integer solvers with starting solutions. (7) We present extensive experiments over real-world and benchmark data. The results demonstrate that our methods are effective at deriving high-quality package results and achieve runtime performance that is an order of magnitude faster than directly using ILP solvers over large datasets."
+    },
+    {
+      "id": "sigmod-rec",
+      "year": 2017,
+      "title": "A Scalable Execution Engine for Package Queries",
+      "titleHref": "https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf",
+      "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
+      "venue": "SIGMOD Rec.",
+      "pages": "24-31",
+      "award": "Research Highlight",
+      "awardNote": "ACM SIGMOD Research Highlight Award",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/3093754.3093761"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "ACM SIGMOD Record",
+      "abstract": "Many modern applications and real-world problems involve the design of item collections, or packages: from planning your daily meals all the way to mapping the universe. Despite the pervasive need for packages, traditional data management does not offer support for their definition and computation. This is because traditional database queries follow a powerful, but very simple model: a query defines constraints that each tuple in the result must satisfy. However, a system tasked with the design of packages cannot consider items independently; rather, the system needs to determine if a set of items collectively satisfy given criteria. In this paper, we present package queries, a new query model that extends traditional database queries to handle complex constraints and preferences over answer sets. We develop a full-fledged package query system, implemented on top of a traditional database engine. Our work makes several contributions. First, we design PaQL, a SQL-based query language that supports the declarative specification of package queries. Second, we present a fundamental strategy for evaluating package queries that combines the capabilities of databases and constraint optimization solvers. The core of our approach is a set of translation rules that transform a package query to an integer linear program. Third, we introduce an offline data partitioning strategy allowing query evaluation to scale to large data sizes. Fourth, we introduce SKETCHREFINE, an efficient and scalable algorithm for package evaluation, which offers strong approximation guarantees. Finally, we present extensive experiments over real-world data. Our results demonstrate that SKETCHREFINE is effective at deriving high-quality package results, and achieves runtime performance that is an order of magnitude faster than directly using ILP solvers over large datasets."
+    },
+    {
+      "id": "redistributing-funds",
+      "year": 2017,
+      "title": "Redistributing Funds across Charitable Crowdfunding Campaigns",
+      "titleHref": "https://arxiv.org/abs/1706.00070",
+      "authors": "Matteo Brucato, Azza Abouzied, Chris Blauvelt",
+      "venue": "arXiv",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "https://arxiv.org/pdf/1706.00070"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "arXiv preprint",
+      "abstract": "On Kickstarter only 36% of crowdfunding campaigns successfully raise sufficient funds for their projects. In this paper, we explore the possibility of redistribution of crowdfunding donations to increase the chances of success. We define several intuitive redistribution policies and, using data from a real crowdfunding platform, LaunchGood, we assess the potential improvement in campaign fundraising success rates. We find that an aggressive redistribution scheme can boost campaign success rates from 37% to 79%, but such choice-agnostic redistribution schemes come at the cost of disregarding donor preferences. Taking inspiration from offline giving societies and donor clubs, we build a case for choice preserving redistribution schemes that strike a balance between increasing the number of successful campaigns and respecting giving preference. We find that choice-preserving redistribution can easily achieve campaign success rates of 48%. Finally, we discuss the implications of these different redistribution schemes for the various stakeholders in the crowdfunding ecosystem."
+    },
+    {
+      "id": "paql-vldb-2016",
+      "year": 2016,
+      "title": "Scalable Package Queries in Relational Database Systems",
+      "titleHref": "http://www.vldb.org/pvldb/vol9/p576-brucato.pdf",
+      "authors": "Matteo Brucato, Juan Felipe Beltran, Azza Abouzied, Alexandra Meliou",
+      "venue": "VLDB",
+      "location": "New Delhi, India",
+      "pages": "576-587",
+      "award": "Best Papers",
+      "awardNote": "Best Papers of VLDB 2016 (invited journal paper in VLDB Journal)",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p576-brucato.pdf"
+        },
+        {
+          "label": "Extended",
+          "href": "http://arxiv.org/pdf/1512.03564v2.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/2904483.2904489"
+        },
+        {
+          "label": "Slides",
+          "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-presentation-share.pdf"
+        },
+        {
+          "label": "Poster",
+          "href": "http://packagebuilder.cs.umass.edu/papers/scalable-paql-poster.pdf"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "abstract": "Traditional database queries follow a simple model: they define constraints that each tuple in the result must satisfy. This model is computationally efficient, as the database system can evaluate the query conditions on each tuple individually. However, many practical, real-world problems require a collection of result tuples to satisfy constraints collectively, rather than individually. In this paper, we present package queries, a new query model that extends traditional database queries to handle complex constraints and preferences over answer sets. We develop a full-fledged package query system, implemented on top of a traditional database engine. Our work makes several contributions. First, we design PaQL, a SQL-based query language that supports the declarative specification of package queries. We prove that PaQL is at least as expressive as integer linear programming, and therefore, evaluation of package queries is in general NP-hard. Second, we present a fundamental evaluation strategy that combines the capabilities of databases and constraint optimization solvers to derive solutions to package queries. The core of our approach is a set of translation rules that transform a package query to an integer linear program. Third, we introduce an offline data partitioning strategy allowing query evaluation to scale to large data sizes. Fourth, we introduce SketchRefine, a scalable algorithm for package evaluation, with strong approximation guarantees ((1 ± ε)^6-factor approximation). Finally, we present extensive experiments over real-world and benchmark data. The results demonstrate that SketchRefine is effective at deriving high-quality package results, and achieves runtime performance that is an order of magnitude faster than directly using ILP solvers over large datasets."
+    },
+    {
+      "id": "query-relaxation",
+      "year": 2014,
+      "title": "Improving Package Recommendations through Query Relaxation",
+      "titleHref": "http://dl.acm.org/citation.cfm?id=2658843",
+      "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
+      "venue": "VLDB",
+      "location": "Hangzhou, China",
+      "pages": "13-18",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p3-brucato.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/2658840.2658843"
+        },
+        {
+          "label": "Slides",
+          "href": "http://packagebuilder.cs.umass.edu/papers/package-recomm-slides-web.pdf"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "Proceedings of the Data4U Workshop, co-located with VLDB",
+      "abstract": "Recommendation systems aim to identify items that are likely to be of interest to users. In many cases, users are interested in package recommendations as collections of items. For example, a dietitian may wish to derive a dietary plan as a collection of recipes that is nutritionally balanced, and a travel agent may want to produce a vacation package as a coordinated collection of travel and hotel reservations. Recent work has explored extending recommendation systems to support packages of items. These systems need to solve complex combinatorial problems, enforcing various properties and constraints defined on sets of items. Introducing constraints on packages makes recommendation queries harder to evaluate, but also harder to express: Queries that are under-specified produce too many answers, whereas queries that are over-specified frequently miss interesting solutions. In this paper, we study query relaxation techniques that target package recommendation systems. Our work offers three key insights: First, even when the original query result is not empty, relaxing constraints can produce preferable solutions. Second, a solution due to relaxation can only be preferred if it improves some property specified by the query. Third, relaxation should not treat all constraints as equals: some constraints are more important to the users than others. Our contributions are threefold: (a) we define the problem of deriving package recommendations through query relaxation, (b) we design and experimentally evaluate heuristics that relax query constraints to derive interesting packages, and (c) we present a crowd study that evaluates the sensitivity of real users to different kinds of constraints and demonstrates that query relaxation is a powerful tool in diversifying package recommendations.",
+      "workshop": "Data4U"
+    },
+    {
+      "id": "pkgbuilder-vldb-demo",
+      "year": 2014,
+      "title": "PackageBuilder: From Tuples to Packages",
+      "titleHref": "http://www.vldb.org/pvldb/vol7/p1593-brucato.pdf",
+      "authors": "Matteo Brucato, Rahul Ramakrishna, Azza Abouzied, Alexandra Meliou",
+      "venue": "VLDB",
+      "location": "Hangzhou, China",
+      "pages": "1593-1596",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p1069-brucato.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.14778/2733004.2733038"
+        },
+        {
+          "label": "Poster",
+          "href": "http://packagebuilder.cs.umass.edu/papers/main-poster.pdf"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "Proceedings of the VLDB Endowment",
+      "abstract": "In this demo, we present PACKAGE BUILDER, a system that extends database systems to support package queries. A package is a collection of tuples that individually satisfy base constraints and collectively satisfy global constraints. The need for package support arises in a variety of scenarios: For example, in the creation of meal plans, users are not only interested in the nutritional content of individual meals (base constraints), but also care to specify daily consumption limits and control the balance of the entire plan (global constraints). We introduce PaQL, a declarative SQL-based package query language, and the interface abstractions which allow users to interactively specify package queries and easily navigate through their results. To efficiently evaluate queries, the system employs pruning and heuristics, as well as state-of-the-art constraint optimization solvers. We demonstrate PACKAGE BUILDER by allowing attendees to interact with the system's interface, to define PaQL queries and to observe how query evaluation is performed.",
+      "category": "demo"
+    },
+    {
+      "id": "pkgbuilder-sigmod-poster",
+      "year": 2014,
+      "title": "PackageBuilder: Querying for packages of Tuples",
+      "titleHref": "http://dl.acm.org/citation.cfm?doid=2588555.2612667",
+      "authors": "Kevin Fernandes, Matteo Brucato, Rahul Ramakrishna, Azza Abouzied, Alexandra Meliou",
+      "venue": "SIGMOD",
+      "location": "Snowbird, UT, USA",
+      "pages": "1613-1614",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "http://packagebuilder.cs.umass.edu/papers/p1613-fernandes.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1145/2588555.2612667"
+        }
+      ],
+      "theme": "paql",
+      "venueFull": "ACM SIGMOD International Conference on Management of Data",
+      "abstract": "PackageBuilder is a system that extends query engines to support package generation. A package is a collection of tuples with certain global properties defined on the collection as a whole. In contrast to traditional query answers where each answer tuple needs to satisfy the query predicates, each answer package needs to satisfy global constraints on the collection of tuples: e.g., a package of recipes that collectively do not exceed 2,200 calories. PackageBuilder introduces simple extensions to the SQL language to support package-level predicates, and includes a simple interface that allows users to load datasets and interactively specify package queries. Our system allows users to interactively navigate through the result packages, and to provide feedback by fixing tuples within a package. PackageBuilder automatically processes this feedback to refine the package queries, and generate new sets of results.",
+      "category": "poster"
+    },
+    {
+      "id": "metric-spaces",
+      "year": 2014,
+      "title": "Metric Spaces for Temporal Information Retrieval",
+      "titleHref": "files/84160385_e.pdf",
+      "authors": "Matteo Brucato, Danilo Montesi",
+      "venue": "ECIR",
+      "location": "Amsterdam, the Netherlands",
+      "pages": "385-397",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/84160385_e.pdf"
+        },
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1007/978-3-319-06028-6_32"
+        },
+        {
+          "label": "Slides",
+          "href": "files/TIR-ECIR14v1_web.pdf"
+        }
+      ],
+      "theme": "temporal",
+      "venueFull": "European Conference on Information Retrieval",
+      "abstract": "Documents and queries are rich in temporal features, both at the meta-level and at the content-level. We exploit this information to define temporal scope similarities between documents and queries in metric spaces. Our experiments show that the proposed metrics can be very effective for modeling the relevance for different search tasks, and provide insights into an inherent asymmetry in temporal query semantics. Moreover, we propose a simple ranking model that combines the temporal scope similarity with traditional keyword similarities. We experimentally show that it is not worse than traditional keyword-based rankings for non-temporal queries, and that it improves the overall effectiveness for time-based queries."
+    },
+    {
+      "id": "named-temporal",
+      "year": 2013,
+      "title": "Recognising and Interpreting Named Temporal Expressions",
+      "titleHref": "files/named-temporal-ranlp2013.pdf",
+      "authors": "Matteo Brucato, Leon Derczynski, Hector Llorens, Kalina Bontcheva, Christian S. Jensen",
+      "venue": "RANLP",
+      "location": "Hissar, Bulgaria",
+      "pages": "113-121",
+      "award": "Best Young Researcher Nominee",
+      "awardNote": "Best Young Researcher Award Nominee",
+      "links": [
+        {
+          "label": "Paper",
+          "href": "files/named-temporal-ranlp2013.pdf"
+        }
+      ],
+      "theme": "temporal",
+      "venueFull": "International Conference on Recent Advances in Natural Language Processing",
+      "abstract": "This paper introduces a new class of temporal expression – named temporal expressions – and methods for recognising and interpreting its members. The commonest temporal expressions typically contain date and time words, like April or hours. Research into recognising and interpreting these typical expressions is mature in many languages. However, there is a class of expressions that are less typical, very varied, and difficult to automatically interpret. These indicate dates and times, but are harder to detect because they often do not contain time words and are not used frequently enough to appear in conventional temporally-annotated corpora – for example Michaelmas or Vasant Panchami. Using Wikipedia and linked data, we automatically construct a resource of English named temporal expressions, and use it to extract training examples from a large corpus. These examples are then used to train and evaluate a named temporal expression recogniser. We also introduce and evaluate rules for automatically interpreting these expressions, and we observe that use of the rules improves temporal annotation performance over existing corpora."
+    }
+  ],
+  "extras": [],
+  "structure": [
+    {
+      "id": "systems",
+      "name": "Data Systems · Query Languages & Engines",
+      "meta": "2014–present",
+      "desc": "How users express decisions and how the system solves them.",
+      "subgroups": [
+        {
+          "id": "decisionhouse-deql",
+          "name": "Decisionhouse & DeQL",
+          "meta": "2025–present",
+          "desc": "A new data-system category. DeQL generalizes the approach to the full space of decision queries."
+        },
+        {
+          "id": "spaql",
+          "name": "Set Selection Under Uncertainty",
+          "meta": "2020–2025",
+          "alias": "a.k.a. Stochastic Package Queries / sPaQL",
+          "desc": "Packages over probabilistic data; risk-aware optimization at scale."
+        },
+        {
+          "id": "paql",
+          "name": "Set Selection with Global Constraints",
+          "meta": "2014–2019",
+          "alias": "a.k.a. Package Queries / PaQL / PackageBuilder",
+          "desc": "The foundational work — selecting sets of tuples that jointly satisfy ILP-style constraints."
+        }
+      ]
+    },
+    {
+      "id": "usability",
+      "name": "Usability · Learning User Intent",
+      "meta": "2020–2026",
+      "desc": "How systems learn what the user wants — making prescriptive tooling accessible to non-experts."
+    },
+    {
+      "id": "autotuning",
+      "name": "Auto-Tuning · Workload Intelligence",
+      "meta": "2024",
+      "desc": "How databases tune themselves — recommending indexes, compressing workloads."
+    },
+    {
+      "id": "algorithms",
+      "name": "Planning & Sequential Decision-Making",
+      "meta": "2021",
+      "desc": "How classical AI tackles decision-making — abstractions, search, and approximation."
+    },
+    {
+      "id": "responsibility",
+      "name": "Responsibility · Fair & Equitable Decisions",
+      "meta": "2023–present",
+      "desc": "How to keep automated decisions fair and accountable."
+    },
+    {
+      "id": "temporal",
+      "name": "Temporal Reasoning",
+      "meta": "2013–2022",
+      "desc": "How systems understand time in text and queries."
+    }
+  ]
+}

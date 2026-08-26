@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
 	<title>Matteo Brucato</title>
-	<link rel="icon" href="imgs/IMG_0191_3.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="imgs/favicon.png">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-82SB56909H"></script>
@@ -14,701 +16,318 @@
 		gtag('config', 'G-82SB56909H');
 	</script>
 
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/jquery.js"></script>
+	<link rel="stylesheet" href="styles.css">
 
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-	<title>Matteo Brucato</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<!-- Theme init — runs before body renders to avoid a flash -->
+	<script>
+		(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				if (stored === 'dark' || stored === 'light') {
+					document.documentElement.setAttribute('data-theme', stored);
+				}
+			} catch (e) {}
+		})();
+	</script>
 </head>
 <body>
-<div id="body-content">
 
-	<div id="nav-menu">
-		<ul>
-			<li><a class="file_link" href="#project-list">Projects</a></li>
-			<li><a class="file_link" href="#publication-list">Publications</a></li>
-			<li><a class="file_link" href="#service-list">Service</a></li>
-			<li><a class="file_link" href="#talks-list">Talks</a></li>
-<!--			<li><a class="file_link" href="#quotes-list">Quotes</a></li>-->
-			<li>
-				<a class="file_link paper" href="files/cv_matteo_brucato_web.pdf">Download CV</a>
-			</li>
-		</ul>
-	</div>
+<div class="page">
 
-	<div id="profile-picture-frame"><img src="imgs/DSCF0916-v3.png" id="profile-picture" alt="profile picture" /></div>
+	<aside class="sidebar" id="sidebar-slot"></aside>
+	<script src="sidebar.js"></script>
 
-	<h1 id="name">Matteo Brucato</h1>
-<!--	<h2 id="my-title">Ph.D. Candidate, UMass Amherst</h2>-->
-	<h2 id="my-title">Co-Founder &amp; Chief Scientific Officer at <i>Stealth Startup</i> | Ex Microsoft Research</h2>
-	<div class="contact-top">
-<!--		<img src="imgs/icn_email_lg.gif" class="email" alt="email" /> matteo@cs.umass.edu<br/>-->
-<!-- 		<img src="imgs/icn_email_lg.gif" class="email" alt="email" /> mbrucato@microsoft.com<br/> -->
-		<img src="imgs/icn_email_lg.gif" class="email" alt="email" /> matteo@osm-data.com<br/>
-	</div>
-	<div class="social-links social-links-top">
-		<a href="https://www.linkedin.com/in/MatteoBrucato/" title="My LinkedIn profile"><img src="imgs/icon-linkedin-16.png" alt="linkedin" /></a>
-		<a href="https://twitter.com/MatteoBrucato" title="Twitter"><img src="imgs/twitter.png" alt="twitter" /></a>
-		<a href="https://scholar.google.com/citations?user=DCppMt0AAAAJ" title="Google Scholar"><img src="imgs/scholar.png" alt="scholar" /></a>
-		<a href="http://dblp.uni-trier.de/pers/hd/b/Brucato:Matteo" title="DBLP"><img src="imgs/dblp.jpeg" alt="dblp" /></a>
-		<a href="https://dl.acm.org/profile/89758611557" title="ACM DL"><img src="imgs/acm-dl.jpeg" alt="acm-dl" /></a>
-<!--		<a href="https://www.researchgate.net/profile/Matteo_Brucato" title="My ResearchGate profile"><img src="imgs/rg-icon.jpg" alt="research-gate" /></a>-->
-		<!--<a href="http://umass.academia.edu/MatteoBrucato" title="My Academia.edu profile"><img src="imgs/Academia.edu.png" /></a>-->
-		<br/>
-		<!-- <a href="files/cv_matteo_brucato_web.pdf" class="download-pdf"><b>DOWNLOAD CV</b></a> -->
-        <!-- &nbsp;&nbsp;<a href="files/research-statement.pdf" class="download-pdf">My Research Statement</a> -->
-	</div>
+	<main class="main">
 
-<!--	<div class="announcement">-->
-<!--		<b style="font-size: 1.5em">I am in the job market!</b><br>-->
-<!--		<div style="text-align: left; margin-top: 10px">-->
-<!--			Download: <a href="files/cv_matteo_brucato_web.pdf" style="font-weight: bold"> My CV</a> <span style="font-size: 1.5em">☜</span><br>-->
-<!--			Download: <a href="files/research-statement.pdf" style="font-weight: bold"> My Research Statement</a> <span style="font-size: 1.5em">☜</span><br>-->
-<!--			Contact me: <a href="mailto:matteo@cs.umass.edu" style="font-weight: bold">matteo@cs.umass.edu</a> <span style="font-size: 1.5em">☜</span>-->
-<!--		</div>-->
-<!--	</div>-->
-
-	<div style="padding: 0 130px; margin-top: 50px; margin-bottom: 50px">
-		<h4 style="margin: 0; padding: 0; font-style: italic">Favourite Quotes</h4>
-		<blockquote style="margin: 0">“The process of preparing programs for a digital computer is especially attractive, not only because
-			it can be economically and scientifically rewarding, but also because it can be an aesthetic
-			experience much like composing poetry or music”
-			<footer>— <a href="https://www-cs-faculty.stanford.edu/~knuth">Donald E. Knuth</a></footer>
-		</blockquote>
-		<blockquote style="margin: 10px 0">“If you can't explain it simply, you don't understand it well enough”
-			<footer>— Albert Einstein</footer>
-		</blockquote>
-	</div>
-
-	<div id="content">
-
-		<!--			<p>-->
-		<!--				I am a Ph.D. candidate in the <a href="https://www.cics.umass.edu/">College of Information and Computer-->
-		<!--                Sciences</a> at the <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.-->
-		<!--				I am a member of the <a href="http://dream.cs.umass.edu/">DREAM Lab</a>,-->
-		<!--                where I am advised by <a href="http://people.cs.umass.edu/~phaas">Prof. Peter J. Haas</a>.-->
-		<!--                My research interests include data management, information retrieval and natural language processing.-->
-		<!--			</p>-->
-
-<!--		<p>-->
-<!--			I am a Ph.D. candidate in Computer Science working with-->
-<!--			<a href="http://people.cs.umass.edu/~phaas">Peter J. Haas</a> and the-->
-<!--			<a href="http://dream.cs.umass.edu/">DREAM Lab</a> at-->
-<!--			at the <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.-->
-<!--			I am also collaborating with the-->
-<!--			<a href="https://huda-lab.github.io/">Human Data (HuDa) Interaction Lab</a>-->
-<!--			at <a href="https://nyuad.nyu.edu">NYU Abu Dhabi</a>.-->
-<!--		</p>-->
-
-		<h3>Research Interests</h3>
-		<p>
-<!-- 			I am a researcher at <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>. -->
-			My research focuses on augmenting <b>data management systems</b> to support <b>business analytics</b>, 
-			with emphasis on <b>data-driven predictive and prescriptive analytics</b>.
-		</p>
-		<p>
-			The ultimate goal of my research is to <b>democratize decision making</b> in a variety of
-			fundamental applications and disciplines, such as <b>financial planning</b>, <b>meal planning</b>, <b>robotics</b>, 
-			<b>fair machine learning</b>, <b>text summarization</b>, <b>information retrieval</b>, and <b>systems</b>.
-		</p>
-		
-		<h3>Education</h3>
-		<p>
-			In my Ph.D. dissertation, I built a complete and efficient data management system (PackageBuilder) able to support 
-			a broad class of decision-making problems that can be expressed as integer linear programs (ILP), 
-			on both certain and uncertain data.
-			My work has been recognized by several <b>ACM awards</b>.
-			<!-- My current and future research aims at enlarging the scope of these systems to even broader classes of -->
-			<!-- problems. -->
-			<!-- Given the complexity and the broad scope of my research endeavors, my work has been
-			<b>largely interdisciplinary</b>, it led to several <b>top-tier publications</b>,
-			spanning also other research areas such as <b>natural language processing</b>,
-			<b>information retrieval</b>, <b>text summarization</b>, <b>AI</b>, and <b>robotics</b>,
-			and has been recognized by several <b>ACM awards</b>. -->
+		<p class="tagline">Helping humans make better decisions.</p>
+		<p class="intro">
+			I build <b>database-native systems for prescriptive analytics</b>.<br>
+			Decision-making, as declarative as SQL.
 		</p>
 
-<!--		<p>-->
-<!--			I am a Ph.D. candidate in Computer Science working with-->
-<!--			<a href="http://people.cs.umass.edu/~phaas">Peter J. Haas</a> and the-->
-<!--			<a href="http://dream.cs.umass.edu/">DREAM Lab</a> at-->
-<!--			at the <a href="http://www.umass.edu/">University of Massachusetts Amherst</a>.-->
-<!--			I am also collaborating with the-->
-<!--			<a href="https://huda-lab.github.io/">Human Data (HuDa) Interaction Lab</a>-->
-<!--			at <a href="https://nyuad.nyu.edu">NYU Abu Dhabi</a>.-->
-<!--		</p>-->
+		<!-- ========== TIMELINE ========== -->
+		<section class="section">
+			<div class="timeline">
 
-		<p>
-			I obtained my Ph.D. in Computer Science from the University of Massachusetts Amherst,
-			where I collaborated with members of the <a href="http://dream.cs.umass.edu/">DREAM Lab</a>,
-			and the
-			<a href="https://huda-lab.github.io/">Human Data (HuDa) Interaction Lab</a>
-			from <a href="https://nyuad.nyu.edu">NYU Abu Dhabi</a>.
-			I received my Bachelor's and Master's degrees in Computer Science from the
-			<a href="http://www.cse.unibo.it/en">Computer Science and Engineering Department</a> at the
-			<a href="http://www.eng.unibo.it">University of Bologna, Italy</a>.
-		</p>
+				<div class="tl-entry current">
+					<div class="tl-line1">
+						<span class="tl-year">2025</span>
+						<img class="tl-logo osm" src="imgs/logo-osm-icon.svg" alt="OSM">
+						<span class="tl-role">Co-Founder &amp; Chief Scientific Officer</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org osm-word" href="https://osm-data.com/">OSM</a>
+					</div>
+				</div>
 
-		<p>
-			During summer 2017, I interned at
-			<a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, in the <a href="https://www.microsoft.com/en-us/research/group/datasystems/">Data Systems Group</a> (formerly DMX).
-			During summer 2016, I interned at <a href="http://www.ibm.com/watson/">IBM Watson</a>.
-			During spring 2016, I visited <a href="http://nyuad.nyu.edu/en/">NYU Abu Dhabi, UAE</a>.
-			During summer 2015, I visited the <a href="https://amplab.cs.berkeley.edu/">AMPLab at the
-			University of California, Berkeley</a>.
-			During my Master's studies, I visited the
-			<a href="http://cs.au.dk/research/data-intensive-systems/">Data-Intensive Systems group
-				at Aarhus University, Denmark</a>.
-			During my Bachelor's studies, I interned in the
-			<a href="http://dblab.cs.ucr.edu">Database Lab at the University of California, Riverside</a>.
-		</p>
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2021</span>
+						<img class="tl-logo" src="imgs/logo-msr.ico" alt="Microsoft Research">
+						<span class="tl-role">Researcher</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>
+					</div>
+					<ul class="tl-collabs">
+						<li><a href="https://www.microsoft.com/en-us/research/group/datasystems/">Data Systems Group</a></li>
+						<li><a href="https://www.microsoft.com/en-us/research/group/mlo/">MLO (Machine Learning &amp; Optimization) Group</a></li>
+						<li>Azure <span class="tl-collab-tag">VM Allocator</span></li>
+					</ul>
+				</div>
 
-		<div id="video-list">
-			<h3 class="slide-toggle">Videos</h3>
-			<ul style="list-style-type: none;">
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2021</span>
+						<img class="tl-logo umass" src="imgs/logo-umass.ico" alt="UMass Amherst">
+						<span class="tl-role">PhD, Computer Science</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://www.cics.umass.edu/">UMass Amherst</a>
+					</div>
+					<div class="tl-where">
+						<a href="http://dream.cs.umass.edu/">DREAM Lab</a>
+						· advised by <a href="http://people.cs.umass.edu/~phaas">Peter J. Haas</a>, <a href="https://people.cs.umass.edu/~ameli/">Alexandra Meliou</a>, and <a href="https://nyuad.nyu.edu/en/academics/divisions/science/faculty/azza-abouzied.html">Azza Abouzied</a> (NYU)
+					</div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2017</span>
+						<img class="tl-logo" src="imgs/logo-msr.ico" alt="Microsoft Research">
+						<span class="tl-role">Research Intern</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>
+					</div>
+					<div class="tl-where"><a href="https://www.microsoft.com/en-us/research/group/datasystems/">Data Systems Group</a></div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2016</span>
+						<img class="tl-logo" src="imgs/logo-ibm.ico" alt="IBM">
+						<span class="tl-role">Research Intern</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="http://www.ibm.com/watson/">IBM Watson</a>
+					</div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2013</span>
+						<img class="tl-logo" src="imgs/logo-unibo.ico" alt="University of Bologna">
+						<span class="tl-role">MSc, Computer Science</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://disi.unibo.it/en">University of Bologna</a>
+					</div>
+				</div>
+
+				<div class="tl-entry">
+					<div class="tl-line1">
+						<span class="tl-year">2011</span>
+						<img class="tl-logo" src="imgs/logo-unibo.ico" alt="University of Bologna">
+						<span class="tl-role">BSc, Computer Science</span>
+						<span class="tl-at">at</span>
+						<a class="tl-org" href="https://disi.unibo.it/en">University of Bologna</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- ========== RESEARCH ========== -->
+		<section class="section" id="research">
+			<div class="section-h-row">
+				<h2 class="section-h">Research</h2>
+				<a class="section-link" href="publications.html">Publications →</a>
+			</div>
+
+			<div class="research-umbrella">
+				My research on database-native prescriptive analytics spans six aspects — from query languages and execution engines to learning user intent, self-tuning, temporal reasoning, and fairness.
+			</div>
+
+
+			<div id="research-slot"></div>
+
+		</section>
+
+		<!-- ========== VIDEOS ========== -->
+		<section class="section">
+			<h2 class="section-h">Videos</h2>
+			<div class="videos">
+				<div class="video">
+					<iframe src="https://www.youtube.com/embed/1v5KevGKbfE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="video-cap">VLDB 2020 — Best Demonstration Award</div>
+				</div>
+				<div class="video">
+					<iframe src="https://www.youtube.com/embed/UrEOEplK06I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="video-cap">SIGMOD 2020 — Technical Paper Talk</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== TALKS ========== -->
+		<section class="section">
+			<h2 class="section-h">Talks</h2>
+			<ul class="talks talks-collapsed">
 				<li>
-					<span style="font-size: 1.3em"><b>VLDB 2020 Best Demonstration Award</b>:</span>
-					<br>
-					<iframe width="500" height="281" src="https://www.youtube.com/embed/1v5KevGKbfE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<span class="yr">2024</span>
+					<span>
+						<span class="title">Enabling In-Database Decision Support with Package Queries</span><br>
+						<span class="where"><a href="https://www.microsoft.com/en-us/research/group/gray-systems-lab/">Gray Systems Lab</a>, Microsoft</span>
+					</span>
 				</li>
 				<li>
-					<span style="font-size: 1.3em"><b>SIGMOD 2020 Technical Paper Presentation</b>:</span>
-					<br>
-					<iframe width="500" height="281" src="https://www.youtube.com/embed/UrEOEplK06I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<span class="yr">2024</span>
+					<span>
+						<span class="title">Wred: Workload Reduction for Scalable Index Tuning</span><br>
+						<span class="where"><a href="https://2024.sigmod.org/">SIGMOD 2024</a>, Santiago, Chile</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2021</span>
+					<span>
+						<span class="title">Package Queries: Scalable Prescriptive Analytics Close to the Data</span><br>
+						<span class="where"><a href="https://www.cc.gatech.edu/">Georgia Tech</a>; <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2021</span>
+					<span>
+						<span class="title">Stochastic Package Queries for In-Database Prescriptive Analytics</span><br>
+						<span class="where"><a href="https://sisudata.com/">Sisu Data</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020–21</span>
+					<span>
+						<span class="title">Package Queries: Enabling Declarative and Scalable Prescriptive Analytics in Relational Data</span><br>
+						<span class="where"><a href="https://daslab.seas.harvard.edu/">Harvard, DASLab</a>; <a href="https://megagon.ai/">Megagon Labs</a>; <a href="https://dsg.csail.mit.edu/">MIT CSAIL, Data Systems Group</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020</span>
+					<span>
+						<span class="title">sPaQLTooLs: A Stochastic Package Query Interface for Scalable Constrained Optimization</span><br>
+						<span class="where"><a href="https://vldb2020.org/">VLDB 2020</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020</span>
+					<span>
+						<span class="title">Stochastic Package Queries in Probabilistic Databases</span><br>
+						<span class="where"><a href="https://sigmod2020.org/">SIGMOD 2020</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2020</span>
+					<span>
+						<span class="title">Stochastic Package Queries for In-Database Constrained Optimization Under Uncertainty</span><br>
+						<span class="where"><a href="https://mitdbg.github.io/nedbday/2020/#program">NEDB</a>, MIT, Cambridge, MA; <a href="https://www.informs.org/Meetings-Calendar/Annual-Meeting">INFORMS 2020</a></span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2017</span>
+					<span>
+						<span class="title">Scalable Package Queries in Relational Database Systems</span><br>
+						<span class="where"><a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, Redmond; <a href="http://www.vldb.org/2016/">VLDB 2016</a>, New Delhi</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2016</span>
+					<span>
+						<span class="title">Conceptual Queries for Multiple Data Sources</span><br>
+						<span class="where"><a href="https://www.research.ibm.com/labs/austin/">IBM Research</a>, Austin, TX</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2015</span>
+					<span>
+						<span class="title">Package Queries: From Tuples to Packages</span><br>
+						<span class="where"><a href="http://crd.lbl.gov/departments/data-science-and-technology/">Berkeley Lab</a>; <a href="http://amplab.cs.berkeley.edu/">AMPLab</a>, UC Berkeley</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2014</span>
+					<span>
+						<span class="title">Improving Package Recommendations through Query Relaxation</span><br>
+						<span class="where"><a href="http://www.vldb.org/2014/">VLDB 2014</a>, Hangzhou</span>
+					</span>
+				</li>
+				<li>
+					<span class="yr">2013–14</span>
+					<span>
+						<span class="title">Metric Spaces for Temporal Information Retrieval</span><br>
+						<span class="where"><a href="http://ecir2014.org/">ECIR 2014</a>, Amsterdam; <a href="http://www.cse.unibo.it/en">U. Bologna</a>; <a href="http://cs.au.dk/research/research-areas/data-intensive-systems/">Aarhus University</a></span>
+					</span>
 				</li>
 			</ul>
-		</div>
+			<button class="talks-toggle" type="button" aria-expanded="false"></button>
+		</section>
 
-		<div id="project-list">
-			<h3 class="slide-toggle">Projects</h3>
-			<ul>
-<!-- 				<li>
-					<div style="display: block; float: left; width: 0">&nbsp;</div>
-					<a href="http://packagebuilder.cs.umass.edu">Package Builder</a>
-					&mdash; a system that extends query engines to support package generation.
-				</li> -->
-				<li>
-					<div style="display: block; float: left; width: 0">&nbsp;</div>
-					In-Database Prescriptive Analytics
-				</li>
-<!-- 				<li style="padding-top: 10px">
-					<div style="display: block; float: left; width: 0">&nbsp;</div>
-					Scalable Markov Decision Processes
-				</li> -->
-				<li style="padding-top: 10px">
-					<div style="display: block; float: left; width: 0">&nbsp;</div>
-					Scalable Fair Machine Learning &mdash; collaboration with Microsoft for improving
-					<a href="http://fairlearn.org">Fairlearn</a>
-					(<a href="https://github.com/fairlearn/fairlearn">code</a>).
-				</li>
-				<li style="padding-top: 10px">
-					<div style="display: block; float: left; width: 0">&nbsp;</div>
-					SuDocu &mdash; Example-Driven Personalized Document Summarization
-				</li>
-<!-- 				<li style="padding-top: 10px">
-					<div style="display: block; float: left; width: 0">&nbsp;</div>
-					<a href="files/84160385_e.pdf">Temporal Information Retrieval</a>
-				</li> -->
-			</ul>
-		</div>
+		<!-- ========== SERVICE ========== -->
+		<section class="section">
+			<h2 class="section-h">Service</h2>
+			<div class="service">
+				<div class="service-block">
+					<h4>Program Committee</h4>
+					<div class="items">ICDE 2027, VLDB 2027, SIGMOD 2026, SIGMOD 2025, VLDB 2025, DataPlat @ ICDE 2024, TKDE 2020</div>
+				</div>
+				<div class="service-block">
+					<h4>Guest Editorial Board</h4>
+					<div class="items"><a href="http://www.journals.elsevier.com/information-processing-and-management/">Information Processing &amp; Management</a>, special issue on <a href="http://staffwww.dcs.shef.ac.uk/people/L.Derczynski/time_and_ir_ipm.html">Time &amp; Information Retrieval</a>, 2014/15</div>
+				</div>
+				<div class="service-block">
+					<h4>External Review Committee</h4>
+					<div class="items">VLDB 2017, SIGMOD 2015, VLDB 2015, RANLP 2013</div>
+				</div>
+			</div>
+		</section>
 
-		<div id="publication-list">
-			<h3 class="slide-toggle">Publications</h3>
-			<ol>
+		<div class="footer">Last updated: <span id="last-updated">—</span>.</div>
 
-				<!--					<li class="paper">-->
-				<!--						<span class="paper-title">-->
-				<!--							<a href="___">-->
-				<!--								Title-->
-				<!--							</a>-->
-				<!--						</span>-->
-				<!--						<div class="paper-authors">Authors.</div>-->
-				<!--						<div class="paper-venue">-->
-				<!--							<a href="____">Venue</a>-->
-				<!--						</div>-->
-				<!--						<div class="paper-links">-->
-				<!--							<a class="file_link paper" href="____________">Paper</a>-->
-				<!--							<a class="file_link video" href="______________">Talk</a>-->
-				<!--							<a class="file_link slides" href="____________">Slides</a>-->
-				<!--							<a class="file_link poster" href="____________">Poster</a>-->
-				<!--							<a class="file_link external" href="____________">External/Other</a>-->
-				<!--							<a class="file_link award" href="______________">Award</a>-->
-				<!--						</div>-->
-				<!--					</li>-->
-
-				<li class="paper">
-					<span class="paper-title">
-						<a href="https://openproceedings.org/2025/conf/edbt/paper-346.pdf">
-							Stochastic SketchRefine: Scaling In-Database Decision-Making under Uncertainty to Millions of Tuples
-						</a>
-					</span>
-					<div class="paper-authors">Riddho Ridwanul Haque, Anh Mai, Matteo Brucato, Azza Abouzied, Peter Haas, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="">VLDB 2025</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://www.vldb.org/pvldb/vol18/p3106-haque.pdf">Paper</a>
-						<a class="file_link paper" href="https://arxiv.org/abs/2411.17915">Paper (Extended)</a>
-					</div>
-				</li>
-				
-				<li class="paper">
-					<span class="paper-title">
-						<a href="https://openproceedings.org/2025/conf/edbt/paper-346.pdf">
-							FairnessEval: a Framework for Evaluating Fairness of Machine Learning Models
-						</a>
-					</span>
-					<div class="paper-authors">Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi</div>
-					<div class="paper-venue">
-						<a href="">EDBT 2025</a> (demo)
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://openproceedings.org/2025/conf/edbt/paper-346.pdf">Paper</a>
-					</div>
-				</li>
-				
-				<li class="paper">
-					<span class="paper-title">
-						<a href="https://dl.acm.org/doi/abs/10.1145/3639305">
-							Wred: Workload Reduction for Scalable Index Tuning
-						</a>
-					</span>
-					<div class="paper-authors">Matteo Brucato, Tarique Siddiqui, Wentao Wu, Vivek Narasayya, Surajit Chaudhuri</div>
-					<div class="paper-venue">
-						<a href="">SIGMOD 2024</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://dl.acm.org/doi/abs/10.1145/3639305">Paper</a>
-					</div>
-				</li>
-
-				<li class="paper">
-					<span class="paper-title">
-						<a href="https://www.vldb.org/pvldb/vol17/p1146-mai.pdf">
-							Scaling Package Queries to a Billion Tuples via Hierarchical Partitioning and Customized Optimization
-						</a>
-					</span>
-					<div class="paper-authors">Anh L. Mai, Pengyu Wang, Azza Abouzied, Matteo Brucato, Peter J. Haas, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="">VLDB 2024</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://www.vldb.org/pvldb/vol17/p1146-mai.pdf">Paper</a>
-						<a class="file_link paper" href="https://arxiv.org/pdf/2307.02860.pdf">Paper (Extended)</a>
-					</div>
-				</li>
-
-				<li class="paper">
-					<span class="paper-title">
-						<a href="https://dl.acm.org/doi/pdf/10.1145/3565481">
-							Ranking Models for the Temporal Dimension of Text
-						</a>
-					</span>
-					<div class="paper-authors">Stefano Giovanni Rizzo, Matteo Brucato, Danilo Montesi</div>
-					<div class="paper-venue">
-						<a href="https://dl.acm.org/journal/tois">ACM Transactions on Information Systems (TOIS) 2022</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://dl.acm.org/doi/pdf/10.1145/3565481">Paper</a>
-					</div>
-				</li>
-				
-				<li class="paper">
-						<span class="paper-title">
-						<a href="https://aclanthology.org/2021.newsum-1.14.pdf">
-								SubSumE: A Dataset for Subjective Summary Extraction from Wikipedia Documents
-						</a>
-						</span>
-					<div class="paper-authors">Nishant Yadav, Matteo Brucato, Anna Fariha, Oscar Yongquist,
-						Julian Killingback, Alexandra Meliou, Peter J. Haas</div>
-					<div class="paper-venue">
-						<a href="https://summarization2021.github.io/">NewSum</a>
-						at <a href="https://2021.emnlp.org/">EMNLP 2021</a> (workshop)
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://aclanthology.org/2021.newsum-1.14.pdf">Paper</a>
-<!--						<a class="file_link slides" href="http://packagebuilder.cs.umass.edu/papers/package-recomm-slides-web.pdf">Slides</a>-->
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="files/NSBBGZicra21_cr.pdf">
-								Solving Markov Decision Processes with Partial State Abstractions
-							</a>
-						</span>
-					<div class="paper-authors">Samer B. Nashed, Justin Svegliato, Matteo Brucato, Connor Basich, Rod Grupen, Shlomo Zilberstein</div>
-					<div class="paper-venue">
-						<a href="http://www.icra2021.org/">ICRA 2021</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="files/NSBBGZicra21_cr.pdf">Paper</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="http://www.vldb.org/pvldb/vol13/p2881-brucato.pdf">
-								sPaQLTooLs: A Stochastic Package Query Interface for Scalable Constrained Optimization
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Miro Mannino, Azza Abouzied, Peter J. Haas, Alexandra Meliou</div>
-					<div class="paper-venue"><a href="https://vldb2020.org/">VLDB 2020</a> (demo)</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="files/p1202-brucato.pdf">Paper</a>
-						<a class="file_link video" href="https://www.youtube.com/watch?v=1v5KevGKbfE">Talk</a>
-						<a class="file_link award" href="https://vldb2020.org/vldb-2020-awards.html">Best Demonstration Award</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf">
-								SuDocu: Summarizing Documents by Example
-							</a>
-						</span>
-					<div class="paper-authors">Anna Fariha, Matteo Brucato, Peter J. Haas, Alexandra Meliou</div>
-					<div class="paper-venue"><a href="https://vldb2020.org/">VLDB 2020</a> (demo)</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://www.vldb.org/pvldb/vol13/p2861-fariha.pdf">Paper</a>
-						<a class="file_link video" href="https://www.youtube.com/watch?v=ZGzF6cBSYjo">Talk</a>
-						<a class="file_link award" href="https://vldb2020.org/vldb-2020-awards.html">Best Demonstration Runner-up Award</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://dl.acm.org/doi/10.1145/3318464.3389765">
-								Stochastic Package Queries in Probabilistic Databases
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Nishant Yadav, Azza Abouzied, Peter J. Haas, Alexandra Meliou</div>
-					<div class="paper-venue"><a href="https://sigmod2020.org/">SIGMOD 2020</a></div>
-					<div class="paper-links">
-						<a class="file_link paper" href="files/3318464.3389765.pdf">Paper</a>
-						<a class="file_link paper" href="https://arxiv.org/pdf/2103.06784.pdf">Paper (Extended)</a>
-						<a class="file_link video" href="https://www.youtube.com/watch?v=UrEOEplK06I">Talk</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://cacm.acm.org/magazines/2019/2/234358-scalable-computation-of-high-order-optimization-queries/">
-								Scalable Computation of High-Order Optimization Queries
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="https://cacm.acm.org/magazines/2019/2">CACM 2019</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="files/cacm-paql.pdf">Paper</a>
-						<a class="file_link award" href="" style="pointer-events: none">CACM Research Highlight</a>
-						<a class="file_link external" href="https://cacm.acm.org/magazines/2019/2/234345-technical-perspective-to-do-or-not-to-do">Technical Perspective by Surajit Chaudhuri</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://doi.org/10.1007/s00778-017-0483-4">
-								Package queries: efficient and scalable computation of high-order constraints
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="https://link.springer.com/journal/778">VLDBJ 2018</a>
-						(Special Issue on Best Papers of VDLB 2016)
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="files/scalable-paql.pdf">Pre-print</a>
-						<a class="file_link external" href="https://link.springer.com/">Final publication</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf">
-								A Scalable Execution Engine for Package Queries
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="https://sigmodrecord.org/2017/05/11/a-scalable-execution-engine-for-package-queries/">SIGMOD Record 2017</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://sigmodrecord.org/publications/sigmodRecord/1703/pdfs/08_ASalable_RH_Brucato.pdf">Paper</a>
-						<a class="file_link award" href="https://sigmodrecord.org/issues/sigmod-record-march-2017-awards/">
-							ACM SIGMOD Research Highlight Award</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://arxiv.org/pdf/1706.00070">
-								Redistributing Funds across Charitable Crowdfunding Campaigns
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Azza Abouzied, Chris Blauvelt</div>
-					<div class="paper-venue">
-						<!--							<a href="https://arxiv.org/abs/1706.00070">CoRR abs/1706.00070, 2017</a>-->
-						<a href="https://arxiv.org/abs/1706.00070">arXiv 2017</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="https://arxiv.org/pdf/1706.00070">Paper</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="http://www.vldb.org/pvldb/vol9/p576-brucato.pdf">
-								Scalable Package Queries in Relational Database Systems
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Juan Felipe Beltran, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="http://www.vldb.org/2016/">VLDB 2016</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="http://packagebuilder.cs.umass.edu/papers/p576-brucato.pdf">Paper</a>
-						<a class="file_link paper" href="http://arxiv.org/pdf/1512.03564v2.pdf">Paper (Extended)</a>
-						<a class="file_link slides" href="http://packagebuilder.cs.umass.edu/papers/scalable-paql-presentation-share.pdf">Slides</a>
-						<a class="file_link poster" href="http://packagebuilder.cs.umass.edu/papers/scalable-paql-poster.pdf">Poster</a>
-						<a class="file_link award" href="" style="pointer-events: none">Best Papers of VDLB 2016</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="http://dl.acm.org/citation.cfm?id=2658843">
-								Improving Package Recommendations through Query Relaxation
-							</a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="https://sites.google.com/site/data4u2014/home">Data4U</a>
-						at <a href="http://www.vldb.org/2014/">VLDB 2014</a> (workshop)
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="http://packagebuilder.cs.umass.edu/papers/p3-brucato.pdf">Paper</a>
-						<a class="file_link slides" href="http://packagebuilder.cs.umass.edu/papers/package-recomm-slides-web.pdf">Slides</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="http://www.vldb.org/pvldb/vol7/p1593-brucato.pdf">
-                                PackageBuilder: From Tuples to Packages
-                            </a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Rahul Ramakrishna, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="http://www.vldb.org/2014/">VLDB 2014</a> (demo)
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="http://packagebuilder.cs.umass.edu/papers/p1069-brucato.pdf">Paper</a>
-						<a class="file_link poster" href="http://packagebuilder.cs.umass.edu/papers/main-poster.pdf">Poster</a>
-						<a class="file_link poster" href="http://packagebuilder.cs.umass.edu/papers/challenge-poster.pdf">Challenge Poster</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="http://dl.acm.org/citation.cfm?doid=2588555.2612667">
-                                PackageBuilder: Querying for packages of Tuples
-                            </a>
-						</span>
-					<div class="paper-authors">Kevin Fernandes, Matteo Brucato, Rahul Ramakrishna, Azza Abouzied, Alexandra Meliou</div>
-					<div class="paper-venue">
-						<a href="http://www.sigmod2014.org/">SIGMOD 2014</a> (poster)
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="http://packagebuilder.cs.umass.edu/papers/p1613-fernandes.pdf">Paper</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="http://link.springer.com/chapter/10.1007/978-3-319-06028-6_32">
-                                Metric Spaces for Temporal Information Retrieval
-                            </a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Danilo Montesi</div>
-					<div class="paper-venue">
-						<a href="http://ecir2014.org/">ECIR 2014</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="files/84160385_e.pdf">Paper</a>
-						<a class="file_link slides" href="files/TIR-ECIR14v1_web.pdf">Slides</a>
-					</div>
-				</li>
-
-				<li class="paper">
-						<span class="paper-title">
-							<a href="https://www.academia.edu/4477889/Recognising_and_Interpreting_Named_Temporal_Expressions">
-                                Recognising and Interpreting Named Temporal Expressions
-                            </a>
-						</span>
-					<div class="paper-authors">Matteo Brucato, Leon Derczynski, Hector Llorens, Kalina Bontcheva, Christian S. Jensen</div>
-					<div class="paper-venue">
-						<a href="http://lml.bas.bg/ranlp2013/">RANLP 2013</a>
-					</div>
-					<div class="paper-links">
-						<a class="file_link paper" href="http://aclweb.org/anthology/R/R13/R13-1015.pdf">Paper</a>
-						<a class="file_link award" href="" style="pointer-events: none">Best Young Researcher Award Nominee</a>
-					</div>
-				</li>
-
-			</ol>
-		</div>
-
-		<div id="service-list">
-			<h3 class="slide-toggle">Service</h3>
-
-			<ul>
-				<li>
-					Program Committee
-					<ul>
-						<li>SIGMOD 2026</li>
-						<li>SIGMOD 2025</li>
-						<li>VLDB 2025</li>
-						<li>DataPlat Workshop @ ICDE 2024</li>
-						<li>TKDE 2020</li>
-					</ul>
-				</li>
-				<li>
-					Guest Editorial Board
-					<ul>
-						<li>
-							<a href="http://www.journals.elsevier.com/information-processing-and-management/">
-								Information Processing and Management</a>, special issue on
-							<a href="http://staffwww.dcs.shef.ac.uk/people/L.Derczynski/time_and_ir_ipm.html">
-								Time and Information Retrieval</a>, 2014/2015
-							</td>
-						</li>
-					</ul>
-				</li>
-				<li>
-					External Review Committee
-					<ul>
-						<li>VLDB 2017</li>
-						<li>SIGMOD 2015</li>
-						<li>VLDB 2015</li>
-						<li>RANLP 2013</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-
-	</div>
-
-	<div id="talks-list">
-		<h3 class="slide-toggle">Talks</h3>
-
-		<ul>
-			<li>“Enabling In-Database Decision Support with Package Queries”
-				<ul>
-					<li>Gray Systems Lab, Microsoft, March 2024</li>
-				</ul>
-			</li>
-			<li>“Stochastic Package Queries for In-Database Constrained Optimization Under Uncertainty”
-				<ul>
-					<li><a href="https://mitdbg.github.io/nedbday/2020/#program">NEDB 2020</a>, Samberg Conference Center at MIT, Cambridge, MA, January 2020</li>
-				</ul>
-			</li>
-			<li>“Scalable Package Queries in Relational Database Systems”
-				<ul>
-					<li><a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, Redmond, WA, June 2017</li>
-					<li><a href="http://www.vldb.org/2016/">VLDB 2016</a>, New Delhi, India, September 2016</li>
-				</ul>
-			</li>
-			<li>“Conceptual Queries for Multiple Data Sources”
-				<ul>
-					<li><a href="https://www.research.ibm.com/labs/austin/">IBM Research</a>, Austin, TX, August 2016</li>
-				</ul>
-			</li>
-			<li>“Package Queries: From Tuples to Packages”
-				<ul>
-					<li><a href="http://crd.lbl.gov/departments/data-science-and-technology/">Berkeley Lab</a>, Berkeley, CA, July 2015</li>
-					<li><a href="http://amplab.cs.berkeley.edu/">AMPLab</a>, UC Berkeley, Berkeley, CA, June 2015</li>
-				</ul>
-			</li>
-			<li>“Improving Package Recommendations through Query Relaxation”
-				<ul>
-					<li><a href="http://www.vldb.org/2014/">VLDB 2014</a>, Hangzhou, China, September 2014</li>
-				</ul>
-			</li>
-			<li>“Metric Spaces for Temporal Information Retrieval”
-				<ul>
-					<li><a href="http://ecir2014.org/">ECIR 2014</a>, Amsterdam, the Netherlands, April 2014</li>
-					<li><a href="http://www.cse.unibo.it/en">University of Bologna</a>, Bologna, Italy, December 2013</li>
-					<li><a href="http://cs.au.dk/research/research-areas/data-intensive-systems/">Aarhus University</a>, Aarhus, Denmark, January 2013</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-
-<!--	<div id="quotes-list">-->
-<!--		<h3 class="slide-toggle">Quotes</h3>-->
-<!--		<ul>-->
-<!--			<li>-->
-<!--				<blockquote>“The process of preparing programs for a digital computer is especially attractive, not only because-->
-<!--					it can be economically and scientifically rewarding, but also because it can be an aesthetic-->
-<!--					experience much like composing poetry or music”-->
-<!--					<footer>— <a href="https://www-cs-faculty.stanford.edu/~knuth">Donald E. Knuth</a></footer>-->
-<!--				</blockquote>-->
-<!--			</li>-->
-<!--			<li>-->
-<!--				<blockquote>“If you can't explain it simply, you don't understand it well enough”-->
-<!--					<footer>— Albert Einstein</footer>-->
-<!--				</blockquote>-->
-<!--			</li>-->
-<!--		</ul>-->
-<!--	</div>-->
-
-	<div id="info">
-		<div><b>Matteo Brucato</b></div>
-<!--		<div>Ph.D. Candidate</div>-->
-		<!-- <div>Researcher</div> -->
-		<div>Co-Founder &amp; Chief Scientific Officer at Stealth Startup</div>
-		<div id="lab">
-<!--			<a href="http://dream.cs.umass.edu/">-->
-<!--				DREAM Lab (Data systems Research for Exploration, Analytics, and Modeling)-->
-<!--			</a><br/>-->
-<!--			<a href="https://www.cics.umass.edu/">-->
-<!--				College of Information and Computer Sciences-->
-<!--			</a><br/>-->
-<!--			<a href="https://www.umass.edu/">-->
-<!--				University of Massachusetts Amherst-->
-<!--			</a>-->
-<!-- 			Microsoft Research, Redmond -->
-		</div>
-<!--		<div id="address">-->
-<!--			Computer Science Building, Office 254<br/>-->
-<!--			140 Governors Drive<br/>-->
-<!--			Amherst, MA 01003-->
-<!--		</div>-->
-		<div class="contact">
-<!--			<img src="imgs/icn_email_lg.gif" class="email" /> matteo@cs.umass.edu<br/>-->
-<!-- 			<img src="imgs/icn_email_lg.gif" class="email" /> mbrucato@microsoft.com<br/> -->
-			<img src="imgs/icn_email_lg.gif" class="email" /> matteo@osm-data.com<br/>
-		</div>
-		<div class="social-links">
-			<a href="https://www.linkedin.com/in/MatteoBrucato/" title="My LinkedIn profile"><img src="imgs/icon-linkedin-16.png" /></a>
-			<a href="https://twitter.com/MatteoBrucato" title="Twitter"><img src="imgs/twitter.png" /></a>
-			<a href="https://scholar.google.com/citations?user=DCppMt0AAAAJ" title="Google Scholar"><img src="imgs/scholar.png" /></a>
-			<a href="http://dblp.uni-trier.de/pers/hd/b/Brucato:Matteo" title="DBLP"><img src="imgs/dblp.jpeg" /></a>
-			<a href="https://dl.acm.org/profile/89758611557" title="ACM DL"><img src="imgs/acm-dl.jpeg" /></a>
-<!--			<a href="https://www.researchgate.net/profile/Matteo_Brucato" title="My ResearchGate profile"><img src="imgs/rg-icon.jpg" /></a>-->
-			<!-- <a href="files/cv_matteo_brucato_web.pdf"><b>CV</b></a> -->
-		</div>
-	</div>
-
-	<div id="footer">
-		Last update: on or after Jun 2026. All rights reserved.
-	</div>
+	</main>
 
 </div>
+
+<script src="papers.js"></script>
+
+<script>
+(function () {
+	var el = document.getElementById('last-updated');
+	if (!el) return;
+	fetch('https://api.github.com/repos/matteo-brucato/matteo-brucato.github.io/commits?per_page=1')
+		.then(function (r) { return r.ok ? r.json() : null; })
+		.then(function (data) {
+			if (!data || !data[0]) return;
+			var d = new Date(data[0].commit.committer.date);
+			el.textContent = d.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+		})
+		.catch(function () { /* leave fallback text */ });
+})();
+</script>
+
+<script>
+(function () {
+	var ul = document.querySelector('ul.talks');
+	var btn = document.querySelector('.talks-toggle');
+	if (!ul || !btn) return;
+	var total = ul.children.length;
+	var visible = 5;
+	function render() {
+		var collapsed = ul.classList.contains('talks-collapsed');
+		btn.textContent = collapsed ? 'Show more' : 'Show fewer';
+		btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+	}
+	if (total <= visible) { btn.style.display = 'none'; return; }
+	render();
+	btn.addEventListener('click', function () {
+		ul.classList.toggle('talks-collapsed');
+		render();
+	});
+})();
+</script>
+
 </body>
 </html>
