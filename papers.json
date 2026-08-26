@@ -101,7 +101,7 @@
       "year": 2026,
       "highlight": true,
       "title": "Speeding up fairness reductions",
-      "titleHref": "../files/speeding-fairness-reductions-tmlr2026.pdf",
+      "titleHref": "files/speeding-fairness-reductions-tmlr2026.pdf",
       "authors": "Andrea Baraldi, Matteo Brucato, Miroslav Dudík, Francesco Guerra, Matteo Interlandi",
       "venue": "TMLR",
       "venueHref": "https://jmlr.org/tmlr/",
@@ -110,7 +110,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "../files/speeding-fairness-reductions-tmlr2026.pdf"
+          "href": "files/speeding-fairness-reductions-tmlr2026.pdf"
         },
         {
           "label": "OpenReview",
@@ -278,13 +278,13 @@
       "id": "mdp-abstractions",
       "year": 2021,
       "title": "Solving Markov Decision Processes with Partial State Abstractions",
-      "titleHref": "../files/NSBBGZicra21_cr.pdf",
+      "titleHref": "files/NSBBGZicra21_cr.pdf",
       "authors": "Samer B. Nashed, Justin Svegliato, Matteo Brucato, Connor Basich, Rod Grupen, Shlomo Zilberstein",
       "venue": "ICRA",
       "links": [
         {
           "label": "Paper",
-          "href": "../files/NSBBGZicra21_cr.pdf"
+          "href": "files/NSBBGZicra21_cr.pdf"
         },
         {
           "label": "DOI",
@@ -299,7 +299,7 @@
       "id": "spaql-tools",
       "year": 2020,
       "title": "sPaQLTooLs: A Stochastic Package Query Interface for Scalable Constrained Optimization",
-      "titleHref": "../files/p1202-brucato.pdf",
+      "titleHref": "files/p1202-brucato.pdf",
       "authors": "Matteo Brucato, Miro Mannino, Azza Abouzied, Peter J. Haas, Alexandra Meliou",
       "venue": "VLDB",
       "award": "Best Demo",
@@ -307,7 +307,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "../files/p1202-brucato.pdf"
+          "href": "files/p1202-brucato.pdf"
         },
         {
           "label": "DOI",
@@ -355,14 +355,14 @@
       "id": "spaql-sigmod",
       "year": 2020,
       "title": "Stochastic Package Queries in Probabilistic Databases",
-      "titleHref": "../files/3318464.3389765.pdf",
+      "titleHref": "files/3318464.3389765.pdf",
       "authors": "Matteo Brucato, Nishant Yadav, Azza Abouzied, Peter J. Haas, Alexandra Meliou",
       "venue": "SIGMOD",
       "pages": "269-283",
       "links": [
         {
           "label": "Paper",
-          "href": "../files/3318464.3389765.pdf"
+          "href": "files/3318464.3389765.pdf"
         },
         {
           "label": "Extended",
@@ -385,7 +385,7 @@
       "id": "cacm-paql",
       "year": 2019,
       "title": "Scalable Computation of High-Order Optimization Queries",
-      "titleHref": "../files/cacm-paql.pdf",
+      "titleHref": "files/cacm-paql.pdf",
       "authors": "Matteo Brucato, Azza Abouzied, Alexandra Meliou",
       "venue": "CACM",
       "pages": "108-116",
@@ -394,7 +394,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "../files/cacm-paql.pdf"
+          "href": "files/cacm-paql.pdf"
         },
         {
           "label": "DOI",
@@ -425,7 +425,7 @@
         },
         {
           "label": "Pre-print",
-          "href": "../files/scalable-paql.pdf"
+          "href": "files/scalable-paql.pdf"
         },
         {
           "label": "Publication",
@@ -598,7 +598,7 @@
       "id": "metric-spaces",
       "year": 2014,
       "title": "Metric Spaces for Temporal Information Retrieval",
-      "titleHref": "../files/84160385_e.pdf",
+      "titleHref": "files/84160385_e.pdf",
       "authors": "Matteo Brucato, Danilo Montesi",
       "venue": "ECIR",
       "location": "Amsterdam, the Netherlands",
@@ -606,7 +606,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "../files/84160385_e.pdf"
+          "href": "files/84160385_e.pdf"
         },
         {
           "label": "DOI",
@@ -614,7 +614,7 @@
         },
         {
           "label": "Slides",
-          "href": "../files/TIR-ECIR14v1_web.pdf"
+          "href": "files/TIR-ECIR14v1_web.pdf"
         }
       ],
       "theme": "temporal",
@@ -625,7 +625,7 @@
       "id": "named-temporal",
       "year": 2013,
       "title": "Recognising and Interpreting Named Temporal Expressions",
-      "titleHref": "../files/named-temporal-ranlp2013.pdf",
+      "titleHref": "files/named-temporal-ranlp2013.pdf",
       "authors": "Matteo Brucato, Leon Derczynski, Hector Llorens, Kalina Bontcheva, Christian S. Jensen",
       "venue": "RANLP",
       "location": "Hissar, Bulgaria",
@@ -635,7 +635,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "../files/named-temporal-ranlp2013.pdf"
+          "href": "files/named-temporal-ranlp2013.pdf"
         }
       ],
       "theme": "temporal",
