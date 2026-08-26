@@ -5,7 +5,7 @@
       "year": 2026,
       "highlight": true,
       "title": "Decisionhouse: Prescriptive Analytics in the Data Stack",
-      "titleHref": "https://doi.org/10.14778/3828612.3828629",
+      "titleHref": "https://osm-data.com/papers/decisionhouse/",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
       "theme": "decisionhouse-deql",
@@ -14,6 +14,10 @@
       "summary": "A new data system category that makes decisions natively declarative — opening research in problem structure detection, formulation selection, and integrating optimization into the platform.",
       "abstract": "Data platforms have evolved by making data-intensive workloads native: SQL and query optimizers eliminated bespoke data-retrieval programs; Lakehouses added first-class support for ML training and serving over the same data. Prescriptive analytics (computing optimal actions subject to constraints over data) is equally data-intensive, yet remains outside the platform: every optimization problem requires a hand-built pipeline from data extraction to solver invocation, rebuilt from scratch whenever the data or the requirements change. We propose Decisionhouses, a new class of data infrastructure that makes prescriptive analytics native. A Decisionhouse provides (i) DeQL (Decision Query Language), a declarative SQL extension where users express decision problems over relational data; (ii) automatic formulation selection that exploits query and data semantics to pick the right problem class and solver—a choice that can change a query's complexity class from NP-hard to polynomial; and (iii) end-to-end integration of optimization into the data platform, from query parsing through solver execution. Decisionhouses can help address several challenges that have kept optimization outside data platforms, including pipeline brittleness, formulation expertise, structural blindness, and scalability cliffs, and make decision-making as accessible as querying data.",
       "links": [
+        {
+          "label": "Paper",
+          "href": "https://osm-data.com/papers/decisionhouse/"
+        },
         {
           "label": "DOI",
           "href": "https://doi.org/10.14778/3828612.3828629"
@@ -29,7 +33,7 @@
       "year": 2026,
       "highlight": true,
       "title": "DeQL Studio: Declarative Decision-Making over Relational Data",
-      "titleHref": "https://doi.org/10.14778/3827998.3828079",
+      "titleHref": "https://osm-data.com/papers/deql-studio/",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
       "pages": "4614-4617",
@@ -39,6 +43,10 @@
       "summary": "Interactive demo where attendees write DeQL queries and watch the Planner pick a formulation live, and compare with the hand-written scripts they'd otherwise ship.",
       "abstract": "Databases separate what from how: users declare what data they want, and a query optimizer decides how to compute it efficiently. Decision-making has no such separation. Computing optimal actions means solving a mathematical optimization problem, and the user must choose how. That choice is the formulation, and alternative formulations reach the same optimum but can differ in solving time by orders of magnitude. A transportation problem, for instance, can be cast as a general mixed-integer linear program (MILP) or, far faster, as min-cost network flow (MCF). We demonstrate DeQL (Decision Query Language), a declarative SQL extension where users state, over relational data, what to decide, what constraints to respect, and what to optimize; the DeQL Planner chooses the formulation. In DeQL Studio, our interactive interface, attendees write DeQL queries, inspect the formulation the Planner selects, and run conventional scripts for comparison: on a GPU allocation problem with 2.7 million possible assignments, the conventional MILP takes Gurobi 26 s to solve to optimality, while the Planner detects the bipartite supply-and-demand structure directly in the query and selects MCF, and the engine reaches the same optimum in 0.88 s, 30× faster. Attendees edit queries and data, watching the engine adapt: removing one constraint changes the detected structure and the Planner switches formulation, while editing data warm-starts the solver from the previous solution.",
       "links": [
+        {
+          "label": "Paper",
+          "href": "https://osm-data.com/papers/deql-studio/"
+        },
         {
           "label": "DOI",
           "href": "https://doi.org/10.14778/3827998.3828079"

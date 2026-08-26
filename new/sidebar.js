@@ -13,7 +13,7 @@
 		'  <h1 class="sb-name">Matteo Brucato</h1>',
 		'</a>',
 
-		'<div class="sb-role">Co-Founder &amp; Chief Scientific Officer<span class="org"><a href="https://osm-data.com/">OSM Data</a></span></div>',
+		'<div class="sb-role">Co-Founder &amp; Chief Scientific Officer<span class="org"><a href="https://osm-data.com/" class="osm-word">OSM</a></span></div>',
 
 		'<div class="sb-contact"><a href="mailto:matteo@osm-data.com">matteo@osm-data.com</a></div>',
 

@@ -1,3 +1,18 @@
+/* OSM brand font (mirrors osm-data.com's wordmark) */
+@font-face {
+  font-family: "PP Neue Gstaad Expanded";
+  src: url("fonts/PPNeueGstaad-ExpandedBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.osm-word {
+  font-family: "PP Neue Gstaad Expanded", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
 /* Theme tokens ------------------------------------------------------------ */
 
 :root {
@@ -190,7 +205,7 @@ h1, h2, h3, h4 {
 }
 
 .sb-role .org { display: block; color: var(--fg-subtle); }
-.sb-role .org a { color: var(--fg-subtle); border-bottom: 1px dashed var(--border); }
+.sb-role .org a { color: var(--fg); border-bottom: 1px dashed var(--border); }
 .sb-role .org a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .sb-contact {
@@ -496,8 +511,18 @@ h1, h2, h3, h4 {
 
 .tl-role { font-size: 14px; font-weight: 600; color: var(--fg); }
 .tl-at { font-size: 13.5px; color: var(--fg-subtle); font-weight: 400; }
-.tl-org { font-size: 13.5px; color: var(--fg); font-weight: 500; border-bottom: 1px dashed var(--border); }
-.tl-org:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.tl-org {
+  font-size: 13.5px;
+  color: var(--fg);
+  font-weight: 500;
+  border-bottom: 0;
+  text-decoration: underline dashed;
+  text-decoration-color: var(--border);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.tl-org.osm-word { font-weight: 700; }
+.tl-org:hover { color: var(--accent); border-bottom: 0; text-decoration-color: var(--accent); }
 
 .tl-where {
   font-size: 12.5px;
