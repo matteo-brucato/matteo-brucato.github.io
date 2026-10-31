@@ -5,9 +5,10 @@
       "year": 2026,
       "highlight": true,
       "title": "Decisionhouse: Prescriptive Analytics in the Data Stack",
-      "titleHref": "https://osm-data.com/papers/decisionhouse/",
+      "titleHref": "https://www.vldb.org/pvldb/vol19/p2755-brucato.pdf",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
+      "pages": "2755-2762",
       "theme": "decisionhouse-deql",
       "venueFull": "Proceedings of the VLDB Endowment",
       "category": "vision",
@@ -16,7 +17,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "https://osm-data.com/papers/decisionhouse/"
+          "href": "https://www.vldb.org/pvldb/vol19/p2755-brucato.pdf"
         },
         {
           "label": "DOI",
@@ -33,7 +34,7 @@
       "year": 2026,
       "highlight": true,
       "title": "DeQL Studio: Declarative Decision-Making over Relational Data",
-      "titleHref": "https://osm-data.com/papers/deql-studio/",
+      "titleHref": "https://www.vldb.org/pvldb/vol19/p4614-brucato.pdf",
       "authors": "Matteo Brucato, Fjodor Kholodkov, Soren Little, Jakob Mayer, Duc Nguyen",
       "venue": "VLDB",
       "pages": "4614-4617",
@@ -45,7 +46,7 @@
       "links": [
         {
           "label": "Paper",
-          "href": "https://osm-data.com/papers/deql-studio/"
+          "href": "https://www.vldb.org/pvldb/vol19/p4614-brucato.pdf"
         },
         {
           "label": "DOI",
@@ -655,7 +656,7 @@
           "id": "decisionhouse-deql",
           "name": "Decisionhouse & DeQL",
           "meta": "2025–present",
-          "desc": "A new data-system category. DeQL generalizes the approach to the full space of decision queries."
+          "desc": "A new data-system category for decision problems. DeQL is its declarative language — the user states what, the engine chooses how."
         },
         {
           "id": "spaql",

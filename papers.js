@@ -193,7 +193,7 @@
 	});
 
 	// Load data and render.
-	fetch('papers.json')
+	fetch('papers.json?v=2')
 		.then(function (r) {
 			if (!r.ok) throw new Error('HTTP ' + r.status);
 			return r.json();
@@ -203,7 +203,7 @@
 			console.error('Failed to load papers.json:', err);
 			var slots = document.querySelectorAll('#research-slot, #publications-slot');
 			slots.forEach(function (el) {
-				el.innerHTML = '<p style="color:#b91c1c;font-size:13px;padding:12px;background:#fef2f2;border:1px solid #fecaca;border-radius:4px">Couldn\'t load <code>papers.json</code> (likely due to <code>file://</code> CORS). Run <code>python3 -m http.server</code> in the <code>new/</code> folder and open <a href="http://localhost:8000/">http://localhost:8000/</a> instead.</p>';
+				el.innerHTML = '<p style="color:#b91c1c;font-size:13px;padding:12px;background:#fef2f2;border:1px solid #fecaca;border-radius:4px">Couldn\'t load <code>papers.json</code> (likely due to <code>file://</code> CORS). Run <code>python3 -m http.server</code> at the repo root and open <a href="http://localhost:8000/">http://localhost:8000/</a> instead.</p>';
 			});
 		});
 

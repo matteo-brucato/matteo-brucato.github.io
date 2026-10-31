@@ -188,7 +188,7 @@ h1, h2, h3, h4 {
 }
 
 .sb-name {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.3px;
@@ -306,23 +306,11 @@ h1, h2, h3, h4 {
   background: var(--surface);
 }
 
-.sb-theme svg { display: block; }
-
-/* Show moon by default (light mode → click to go dark) */
-.sb-theme .icon-sun { display: none; }
-.sb-theme .icon-moon { display: block; }
-
-/* When OS dark (and user hasn't forced light): show sun */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .sb-theme .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .sb-theme .icon-moon { display: none; }
-}
-
-/* Explicit overrides win */
-:root[data-theme="dark"] .sb-theme .icon-sun { display: block; }
-:root[data-theme="dark"] .sb-theme .icon-moon { display: none; }
-:root[data-theme="light"] .sb-theme .icon-sun { display: none; }
-:root[data-theme="light"] .sb-theme .icon-moon { display: block; }
+/* Theme toggle icon reflects CURRENT mode (system / light / dark) */
+.sb-theme svg { display: none; }
+:root:not([data-theme]) .sb-theme .icon-auto { display: block; }
+:root[data-theme="light"] .sb-theme .icon-sun { display: block; }
+:root[data-theme="dark"] .sb-theme .icon-moon { display: block; }
 
 .sb-divider {
   border: 0;
@@ -467,7 +455,17 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.tl-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 2px;
 }
 
 .tl-year {
