@@ -193,7 +193,7 @@
 	});
 
 	// Load data and render.
-	fetch('papers.json?v=3')
+	fetch('papers.json?v=4')
 		.then(function (r) {
 			if (!r.ok) throw new Error('HTTP ' + r.status);
 			return r.json();
