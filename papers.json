@@ -91,6 +91,11 @@
         {
           "label": "Extended",
           "href": "https://arxiv.org/pdf/2605.19246"
+        },
+        {
+          "label": "Demo",
+          "href": "https://ex2bundle-demo.vercel.app/",
+          "icon": "browser"
         }
       ],
       "titleHref": "https://arxiv.org/abs/2605.19246",
