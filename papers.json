@@ -93,6 +93,10 @@
           "href": "https://arxiv.org/pdf/2605.19246"
         },
         {
+          "label": "Code",
+          "href": "https://github.com/kuangfei-long/ex2bundle"
+        },
+        {
           "label": "Demo",
           "href": "https://ex2bundle-demo.vercel.app/",
           "icon": "browser"
